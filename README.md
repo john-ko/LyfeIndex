@@ -1,1 +1,1 @@
-# LyfeIndex
+# Life Index
