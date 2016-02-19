@@ -7,60 +7,62 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		022F0260B6DA522F2A58D59D7B235BA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3997E5D2953ECDF377B85B234FDF550D /* Foundation.framework */; };
-		0E532EFBC71CB1B5E38E0BF3149F1FF0 /* Pods-LyfeIndex-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 519279A09C010A9562F1343BC437D94F /* Pods-LyfeIndex-dummy.m */; };
-		6D311694747F076A21025D0514EC999E /* Pods-LyfeIndex-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CE334AE17980747562F5F04B407F3EC /* Pods-LyfeIndex-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E12BB5529C628720A6F9D3F7AA22268 /* Pods-KrumbsSDKStarterProject-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 096F51B9DAB4C6476F5549C8334BC9FB /* Pods-KrumbsSDKStarterProject-dummy.m */; };
+		14B13B9DC5E607F5674D313A78BE882B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		8628C40AFADC6D117CD7E00E5ED9A52D /* Pods-KrumbsSDKStarterProject-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F3F0CF547216FCA7BBFD3BBCBD31E6F6 /* Pods-KrumbsSDKStarterProject-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2C99906C6320DA71F6E21A585CDBB8F8 /* Pods-LyfeIndex-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LyfeIndex-acknowledgements.plist"; sourceTree = "<group>"; };
-		3997E5D2953ECDF377B85B234FDF550D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		4592C1F9915668C18B878FE1A0E2821D /* Pods-LyfeIndex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LyfeIndex.release.xcconfig"; sourceTree = "<group>"; };
-		519279A09C010A9562F1343BC437D94F /* Pods-LyfeIndex-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LyfeIndex-dummy.m"; sourceTree = "<group>"; };
+		096F51B9DAB4C6476F5549C8334BC9FB /* Pods-KrumbsSDKStarterProject-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KrumbsSDKStarterProject-dummy.m"; sourceTree = "<group>"; };
+		0B963CBB0C15C148BFBB8AD6D359EFE9 /* Pods-KrumbsSDKStarterProject-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KrumbsSDKStarterProject-acknowledgements.markdown"; sourceTree = "<group>"; };
+		319C0E68317213766471C3FAD889D726 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		536D35D54CA8C8BCB245D76467E40AE9 /* KrumbsSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KrumbsSDK.framework; sourceTree = "<group>"; };
-		6F9DC0BDB7280332F7A890579C0317F1 /* Pods-LyfeIndex-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LyfeIndex-resources.sh"; sourceTree = "<group>"; };
-		7CE334AE17980747562F5F04B407F3EC /* Pods-LyfeIndex-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LyfeIndex-umbrella.h"; sourceTree = "<group>"; };
-		7FAA1998E7F49A32C00D51F205604D3D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A7CE0E34A507366CB6D913E59B70EE59 /* Pods-LyfeIndex.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-LyfeIndex.modulemap"; sourceTree = "<group>"; };
-		A9B71986C581F07F1ECDB07A33B9BE11 /* Pods-LyfeIndex-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LyfeIndex-frameworks.sh"; sourceTree = "<group>"; };
+		8C10BEFFEC93CD3330234626BFD7DB60 /* Pods-KrumbsSDKStarterProject.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-KrumbsSDKStarterProject.modulemap"; sourceTree = "<group>"; };
+		ADB17AEF574C2E8C3AC0638C223B01CC /* Pods-KrumbsSDKStarterProject-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KrumbsSDKStarterProject-resources.sh"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		DD25C316F7F53229719DFDE6B27BAE22 /* Pods-LyfeIndex-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LyfeIndex-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E575E67A05E69CF9BAA142D8D9A6F801 /* Pods_LyfeIndex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LyfeIndex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FFE2C05150DF5FE3E68C915C8B3E482C /* Pods-LyfeIndex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LyfeIndex.debug.xcconfig"; sourceTree = "<group>"; };
+		CD989E6F58916ACF1BCDAF66BB875226 /* Pods-KrumbsSDKStarterProject-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KrumbsSDKStarterProject-acknowledgements.plist"; sourceTree = "<group>"; };
+		CE81FBBE449A48A70366BCD9A0E97D74 /* Pods-KrumbsSDKStarterProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KrumbsSDKStarterProject.debug.xcconfig"; sourceTree = "<group>"; };
+		D12DD2A675CE81583EA7FFBF373C5110 /* Pods-KrumbsSDKStarterProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KrumbsSDKStarterProject.release.xcconfig"; sourceTree = "<group>"; };
+		EC1DF9ADA038DD1164C436B8F4B0B416 /* Pods-KrumbsSDKStarterProject-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KrumbsSDKStarterProject-frameworks.sh"; sourceTree = "<group>"; };
+		F22CD0CB6DFBC6765241D815290672D4 /* Pods_KrumbsSDKStarterProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KrumbsSDKStarterProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3F0CF547216FCA7BBFD3BBCBD31E6F6 /* Pods-KrumbsSDKStarterProject-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KrumbsSDKStarterProject-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		59614F85C6EBDCAA713CCAFE7C2C1F0A /* Frameworks */ = {
+		5304365A3D6586BCED37755E8EBA26E3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				022F0260B6DA522F2A58D59D7B235BA5 /* Foundation.framework in Frameworks */,
+				14B13B9DC5E607F5674D313A78BE882B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		112C7921E3A497328D11F4930CBBC9CA /* iOS */ = {
+		1CAA1631363EBC334EBE797D00FC0FB3 /* Pods-KrumbsSDKStarterProject */ = {
 			isa = PBXGroup;
 			children = (
-				3997E5D2953ECDF377B85B234FDF550D /* Foundation.framework */,
+				319C0E68317213766471C3FAD889D726 /* Info.plist */,
+				8C10BEFFEC93CD3330234626BFD7DB60 /* Pods-KrumbsSDKStarterProject.modulemap */,
+				0B963CBB0C15C148BFBB8AD6D359EFE9 /* Pods-KrumbsSDKStarterProject-acknowledgements.markdown */,
+				CD989E6F58916ACF1BCDAF66BB875226 /* Pods-KrumbsSDKStarterProject-acknowledgements.plist */,
+				096F51B9DAB4C6476F5549C8334BC9FB /* Pods-KrumbsSDKStarterProject-dummy.m */,
+				EC1DF9ADA038DD1164C436B8F4B0B416 /* Pods-KrumbsSDKStarterProject-frameworks.sh */,
+				ADB17AEF574C2E8C3AC0638C223B01CC /* Pods-KrumbsSDKStarterProject-resources.sh */,
+				F3F0CF547216FCA7BBFD3BBCBD31E6F6 /* Pods-KrumbsSDKStarterProject-umbrella.h */,
+				CE81FBBE449A48A70366BCD9A0E97D74 /* Pods-KrumbsSDKStarterProject.debug.xcconfig */,
+				D12DD2A675CE81583EA7FFBF373C5110 /* Pods-KrumbsSDKStarterProject.release.xcconfig */,
 			);
-			name = iOS;
+			name = "Pods-KrumbsSDKStarterProject";
+			path = "Target Support Files/Pods-KrumbsSDKStarterProject";
 			sourceTree = "<group>";
 		};
-		14E0E084B84FBB2C2CA8EB86579DD947 /* Targets Support Files */ = {
+		56709A54DE1444FEDCD49B1CAFADE74B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BB6934F42657E81AD3EDDC57B3ABB9F5 /* Pods-LyfeIndex */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		3A564B933676966C2D69EF440C1B9C9F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E575E67A05E69CF9BAA142D8D9A6F801 /* Pods_LyfeIndex.framework */,
+				F22CD0CB6DFBC6765241D815290672D4 /* Pods_KrumbsSDKStarterProject.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,8 +73,8 @@
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				E7B38A14B9BFEB499B6A56D8B174B088 /* Pods */,
-				3A564B933676966C2D69EF440C1B9C9F /* Products */,
-				14E0E084B84FBB2C2CA8EB86579DD947 /* Targets Support Files */,
+				56709A54DE1444FEDCD49B1CAFADE74B /* Products */,
+				FE219F6BFEDC02A75C43EBB646BD59B1 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,30 +94,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BB6934F42657E81AD3EDDC57B3ABB9F5 /* Pods-LyfeIndex */ = {
-			isa = PBXGroup;
-			children = (
-				7FAA1998E7F49A32C00D51F205604D3D /* Info.plist */,
-				A7CE0E34A507366CB6D913E59B70EE59 /* Pods-LyfeIndex.modulemap */,
-				DD25C316F7F53229719DFDE6B27BAE22 /* Pods-LyfeIndex-acknowledgements.markdown */,
-				2C99906C6320DA71F6E21A585CDBB8F8 /* Pods-LyfeIndex-acknowledgements.plist */,
-				519279A09C010A9562F1343BC437D94F /* Pods-LyfeIndex-dummy.m */,
-				A9B71986C581F07F1ECDB07A33B9BE11 /* Pods-LyfeIndex-frameworks.sh */,
-				6F9DC0BDB7280332F7A890579C0317F1 /* Pods-LyfeIndex-resources.sh */,
-				7CE334AE17980747562F5F04B407F3EC /* Pods-LyfeIndex-umbrella.h */,
-				FFE2C05150DF5FE3E68C915C8B3E482C /* Pods-LyfeIndex.debug.xcconfig */,
-				4592C1F9915668C18B878FE1A0E2821D /* Pods-LyfeIndex.release.xcconfig */,
-			);
-			name = "Pods-LyfeIndex";
-			path = "Target Support Files/Pods-LyfeIndex";
-			sourceTree = "<group>";
-		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				112C7921E3A497328D11F4930CBBC9CA /* iOS */,
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		E7B38A14B9BFEB499B6A56D8B174B088 /* Pods */ = {
@@ -126,35 +118,43 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FE219F6BFEDC02A75C43EBB646BD59B1 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1CAA1631363EBC334EBE797D00FC0FB3 /* Pods-KrumbsSDKStarterProject */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		61B0BD15801032F25ACE85B28A629953 /* Headers */ = {
+		9FE7FD6D575FA373D19648E502EE875F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D311694747F076A21025D0514EC999E /* Pods-LyfeIndex-umbrella.h in Headers */,
+				8628C40AFADC6D117CD7E00E5ED9A52D /* Pods-KrumbsSDKStarterProject-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		B786F7E6DFB3676E28FAC6442FEAD74A /* Pods-LyfeIndex */ = {
+		5EA1D1F951BEBAC5DE1061836C51ADA4 /* Pods-KrumbsSDKStarterProject */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7C1121E6BDD8AC89A8656203C309D1DB /* Build configuration list for PBXNativeTarget "Pods-LyfeIndex" */;
+			buildConfigurationList = 910C58093F4A7C1D5C276DF6A4D5DF4F /* Build configuration list for PBXNativeTarget "Pods-KrumbsSDKStarterProject" */;
 			buildPhases = (
-				385B547FD167331F17FB8547B25CF527 /* Sources */,
-				59614F85C6EBDCAA713CCAFE7C2C1F0A /* Frameworks */,
-				61B0BD15801032F25ACE85B28A629953 /* Headers */,
+				B81EC44B6D8930CDC25823BBE1A9E52A /* Sources */,
+				5304365A3D6586BCED37755E8EBA26E3 /* Frameworks */,
+				9FE7FD6D575FA373D19648E502EE875F /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-LyfeIndex";
-			productName = "Pods-LyfeIndex";
-			productReference = E575E67A05E69CF9BAA142D8D9A6F801 /* Pods_LyfeIndex.framework */;
+			name = "Pods-KrumbsSDKStarterProject";
+			productName = "Pods-KrumbsSDKStarterProject";
+			productReference = F22CD0CB6DFBC6765241D815290672D4 /* Pods_KrumbsSDKStarterProject.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -163,7 +163,7 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -174,28 +174,28 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 3A564B933676966C2D69EF440C1B9C9F /* Products */;
+			productRefGroup = 56709A54DE1444FEDCD49B1CAFADE74B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B786F7E6DFB3676E28FAC6442FEAD74A /* Pods-LyfeIndex */,
+				5EA1D1F951BEBAC5DE1061836C51ADA4 /* Pods-KrumbsSDKStarterProject */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		385B547FD167331F17FB8547B25CF527 /* Sources */ = {
+		B81EC44B6D8930CDC25823BBE1A9E52A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E532EFBC71CB1B5E38E0BF3149F1FF0 /* Pods-LyfeIndex-dummy.m in Sources */,
+				0E12BB5529C628720A6F9D3F7AA22268 /* Pods-KrumbsSDKStarterProject-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		2CE16AC72762C01C5DC595053F1F2EF4 /* Debug */ = {
+		5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -213,12 +213,10 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_DEBUG=1",
 					"DEBUG=1",
 					"$(inherited)",
 				);
@@ -236,73 +234,7 @@
 			};
 			name = Debug;
 		};
-		476089D207B1EA03D6362DA51325EE52 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FFE2C05150DF5FE3E68C915C8B3E482C /* Pods-LyfeIndex.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-LyfeIndex/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LyfeIndex/Pods-LyfeIndex.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_LyfeIndex;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		6D9B6606D0DA3418F752E3645E77A4B1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4592C1F9915668C18B878FE1A0E2821D /* Pods-LyfeIndex.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-LyfeIndex/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LyfeIndex/Pods-LyfeIndex.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_LyfeIndex;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C6544A1F1139551CE6C6C9B43404CFA3 /* Release */ = {
+		74857149DC1E0D599B8A01A78349A926 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -322,10 +254,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -339,23 +268,83 @@
 			};
 			name = Release;
 		};
+		A9307E245CFF8B542EC23E3A6D69B2FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D12DD2A675CE81583EA7FFBF373C5110 /* Pods-KrumbsSDKStarterProject.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-KrumbsSDKStarterProject/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KrumbsSDKStarterProject/Pods-KrumbsSDKStarterProject.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_KrumbsSDKStarterProject;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E4B44B62F0E93A9566B2627D545210F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE81FBBE449A48A70366BCD9A0E97D74 /* Pods-KrumbsSDKStarterProject.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-KrumbsSDKStarterProject/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KrumbsSDKStarterProject/Pods-KrumbsSDKStarterProject.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_KrumbsSDKStarterProject;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2CE16AC72762C01C5DC595053F1F2EF4 /* Debug */,
-				C6544A1F1139551CE6C6C9B43404CFA3 /* Release */,
+				5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */,
+				74857149DC1E0D599B8A01A78349A926 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7C1121E6BDD8AC89A8656203C309D1DB /* Build configuration list for PBXNativeTarget "Pods-LyfeIndex" */ = {
+		910C58093F4A7C1D5C276DF6A4D5DF4F /* Build configuration list for PBXNativeTarget "Pods-KrumbsSDKStarterProject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				476089D207B1EA03D6362DA51325EE52 /* Debug */,
-				6D9B6606D0DA3418F752E3645E77A4B1 /* Release */,
+				E4B44B62F0E93A9566B2627D545210F4 /* Debug */,
+				A9307E245CFF8B542EC23E3A6D69B2FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
