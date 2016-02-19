@@ -4,15 +4,15 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-KrumbsSDKStarterProject.xcscheme</key>
+		<key>Pods-LyfeIndex.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>5EA1D1F951BEBAC5DE1061836C51ADA4</key>
+		<key>B786F7E6DFB3676E28FAC6442FEAD74A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
