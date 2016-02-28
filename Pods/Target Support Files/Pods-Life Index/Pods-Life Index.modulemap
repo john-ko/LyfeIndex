@@ -1,0 +1,6 @@
+framework module Pods_Life_Index {
+  umbrella header "Pods-Life Index-umbrella.h"
+
+  export *
+  module * { export * }
+}
