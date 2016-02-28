@@ -1,6 +1,0 @@
-framework module Pods_Life_IndexUITests {
-  umbrella header "Pods-Life IndexUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
