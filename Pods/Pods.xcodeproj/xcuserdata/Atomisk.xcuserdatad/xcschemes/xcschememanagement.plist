@@ -4,7 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-LyfeIndex.xcscheme</key>
+		<key>Pods-Life Index.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Life IndexTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Life IndexUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -12,7 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>B786F7E6DFB3676E28FAC6442FEAD74A</key>
+		<key>1EE195ABB133C7D596742B7A21FD5F03</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C589AC1321033AE0EC51CAC2119B53DC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E23DD111B8CE9AC9640BD7936F01195C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

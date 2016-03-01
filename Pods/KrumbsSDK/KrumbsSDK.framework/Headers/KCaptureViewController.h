@@ -34,7 +34,7 @@ extern NSString *const KCaptureControllerImageUrl;
 extern NSString *const KCaptureControllerMediaJsonUrl;
 extern NSString *const KCaptureControllerCompletionState;
 extern NSString *kCaptureMediaUploadCompletedNotification;
-
+@class IntentPanel;
 /*!
  *@class KCaptureViewControllerDelegate
  This is the delegate interface of the KCaptureViewController
@@ -76,4 +76,8 @@ extern NSString *kCaptureMediaUploadCompletedNotification;
  */
 @property (nonatomic, weak) NSObject<KCaptureViewControllerDelegate>* delegate;
 -(void) shutdown;
+
+
+- (instancetype)initWithPanel: (IntentPanel *)panel;
+
 @end

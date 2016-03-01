@@ -18,6 +18,7 @@ FOUNDATION_EXPORT const unsigned char KrumbsSDKVersionString[];
 
 #import <KrumbsSDK/KrumbsAPI.h>
 #import <KrumbsSDK/KCaptureViewController.h>
+#import <KrumbsSDK/KCapturePageViewController.h>
 #import <KrumbsSDK/KIntentPanelConfiguration.h>
 #import <KrumbsSDK/KrumbsUserInfo.h>
 

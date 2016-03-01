@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "KCaptureViewController.h"
+#import "KCapturePageViewController.h"
 #import "KIntentPanelConfiguration.h"
 
 @class IntentsManager;
@@ -104,13 +105,16 @@
  * @param jsonBundle - the name of the resource bundle where the 'intent-categories.json' file can be found.
  * @param assetResourceName - the name of the Asset (XCAssets) resource bundle where the associated images for Intent Emojis can be found
  */
--(void) registerIntentCategories:(NSBundle *)jsonBundle withAssetResourceName: (NSString *)assetResourceName;
+-(void) registerIntentCategories:(NSBundle *)jsonBundle withAssetResourceName: (NSString *)assetResourceName
+             forApplicationTheme:(NSString *) theme;
 
+-(void) registerIntentCategories:(NSBundle *)jsonBundle withAssetResourceName: (NSString *)assetResourceName;
 /*!
  * @brief Returns the UI configuration settings (defaults) of the K-Intent Panel.
  * @discussion Set values on the returned object, and then call setIntentPanelConfigurationDefaults
   These settings must be applied before the startKCaptureViewController is invoked.
  */
+-(KIntentPanelConfiguration *) getIntentPanelViewConfigurationDefaultsForTheme:(NSString *) applicationTheme;
 -(KIntentPanelConfiguration *) getIntentPanelViewConfigurationDefaults;
 
 /*!
@@ -120,6 +124,7 @@
    to be used in this method.
  * @param panelConfig - the provided panel configuration object.
  */
+-(void) setIntentPanelViewConfigurationDefaults: (KIntentPanelConfiguration *)panelConfig forApplicationTheme:(NSString *)applicationTheme;
 -(void) setIntentPanelViewConfigurationDefaults: (KIntentPanelConfiguration *)panelConfig;
 
 
@@ -134,7 +139,8 @@
 
 
 /*!
- * @brief Initialize, starts and returns the K-Capture component ViewController. You must present the returned view controller in
+ * @brief Initialize, starts and returns a ViewController for the K-Capture component .
+ * You must present the returned view controller in
  * order to make the camera visible and start the capture workflow.
  * @discussion 'Starting' this view controller initializes location tracking and other sensors related
  * to the K-Capture component (e.g. reverse geo etc).
@@ -145,10 +151,12 @@
  * Additionally, when all media (image/audio) file upload to server-side storage is completed
  * a NSNotification will be sent on the topic "K-CaptureMediaUploadCompleted"
  * Note that media upload will occur in the background and retries will happen if network connection is lost.
+ * When multiple "application themes" are registered with the SDK, the K-Capture component will enable
+ * users to 'swipe' through the configured themes. An 'application theme' is a named Intent Panel.
  * @see KCaptureViewControllerDelegate /@see
  * @return captureController - the ViewController to use for situation capture.
  */
--(KCaptureViewController *) startKCaptureViewController;
+-(KCapturePageViewController *) startKCaptureViewController;
 
 /*!
  * @brief Stops any previously started background processing that was started on
