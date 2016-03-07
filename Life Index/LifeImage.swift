@@ -10,10 +10,10 @@ import Foundation
 import RealmSwift
 
 class LifeImage: Object {
-    
-// Specify properties to ignore (Realm won't persist these)
-    
-//  override static func ignoredProperties() -> [String] {
-//    return []
-//  }
+	dynamic var id: String
+	dynamic var tags: [String] = []
+	
+	init(var imageURL: String) {
+		self.id = imageURL
+	}
 }
