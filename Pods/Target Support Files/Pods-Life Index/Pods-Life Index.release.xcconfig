@@ -2,7 +2,7 @@ FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Crashlytics/iOS" "${PODS_ROO
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Crashlytics" "${PODS_ROOT}/Headers/Public/Fabric" "${PODS_ROOT}/Headers/Public/KrumbsSDK"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited)  -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Crashlytics" -isystem "${PODS_ROOT}/Headers/Public/Fabric" -isystem "${PODS_ROOT}/Headers/Public/KrumbsSDK"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"c++" -l"z" -framework "AssetsLibrary" -framework "CoreData" -framework "CoreImage" -framework "CoreLocation" -framework "Crashlytics" -framework "EventKit" -framework "Fabric" -framework "Foundation" -framework "ImageIO" -framework "KrumbsSDK" -framework "MobileCoreServices" -framework "Photos" -framework "Security" -framework "SystemConfiguration" -framework "UIKit"
+OTHER_CFLAGS = $(inherited) -iquote "$CONFIGURATION_BUILD_DIR/Realm.framework/Headers" -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Crashlytics" -isystem "${PODS_ROOT}/Headers/Public/Fabric" -isystem "${PODS_ROOT}/Headers/Public/KrumbsSDK"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"c++" -l"z" -framework "AssetsLibrary" -framework "CoreData" -framework "CoreImage" -framework "CoreLocation" -framework "Crashlytics" -framework "EventKit" -framework "Fabric" -framework "Foundation" -framework "ImageIO" -framework "KrumbsSDK" -framework "MobileCoreServices" -framework "Photos" -framework "Realm" -framework "Security" -framework "SystemConfiguration" -framework "UIKit"
 PODS_FRAMEWORK_BUILD_PATH = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-Life Index"
 PODS_ROOT = ${SRCROOT}/Pods

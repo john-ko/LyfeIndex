@@ -7,15 +7,9 @@
 //
 
 import Foundation
-import RealmSwift
 
-class LifeImage: Object {
-	dynamic var id: String
-	dynamic var image: UIImage
+class LifeImage: RLMObject {
+	dynamic var id: String = ""
+	dynamic var image: UIImage? = nil
 	dynamic var tags: [String] = []
-	
-	init(var imageURL: String, var image: UIImage) {
-		self.id = imageURL
-		self.image = image
-	}
 }

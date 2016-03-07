@@ -10,6 +10,7 @@ target 'Life Index' do
     pod 'KrumbsSDK' , '~> 1.0.6'
     pod 'Fabric'
     pod 'Crashlytics'
+    pod 'Realm'
 end
 
 target 'Life IndexTests' do

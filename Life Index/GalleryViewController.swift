@@ -33,7 +33,7 @@ class GalleryViewController: UICollectionViewController, KCaptureViewControllerD
 	}
 	
 	func captureController(captureController: KCaptureViewController!, didFinishPickingMediaWithInfo media: [String : AnyObject]!) {
-		
+	
 		self.imageView.image = media[KCaptureControllerImageUrl] as? UIImage
 		
 		let mediaJsonUrl: NSURL = (media[KCaptureControllerMediaJsonUrl] as! NSURL)
