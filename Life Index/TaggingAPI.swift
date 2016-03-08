@@ -76,7 +76,7 @@ class TaggingAPI {
 		var results = [String]()
 		
 		do {
-			let json = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
+			let json = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as! [String: AnyObject]
 			//let json = try NSJSONSerialization.JSONObjectWithData(data, options: []) as! [String: AnyObject]
 			if let responses = json["responses"] {
 				

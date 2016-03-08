@@ -79,7 +79,7 @@ class GalleryViewController: UICollectionViewController, KCaptureViewControllerD
 	*/
 	
 }
-
+/*
 extension GalleryViewController {
 	//1
 	override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -160,3 +160,4 @@ extension GalleryViewController: UICollectionViewDelegateFlowLayout {
 			return sectionInsets
 	}
 }
+*/
