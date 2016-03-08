@@ -26,15 +26,17 @@
 		28D309C4EFB583207B759442639030C5 /* Pods_Life_IndexUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Life_IndexUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B881A53A21FC77B11B965B0355EFA7 /* Pods-Life IndexUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Life IndexUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		3997E5D2953ECDF377B85B234FDF550D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3C0F048A13AA36E40933EE426B16D46C /* KrumbsSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KrumbsSDK.framework; sourceTree = "<group>"; };
 		3FE581FF6C9F916BE2B6FDCEA26CA152 /* Pods-Life IndexTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Life IndexTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		4086B4C90D49ADDC83D6F132B3D451CF /* Pods-Life IndexUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Life IndexUITests-umbrella.h"; sourceTree = "<group>"; };
 		44B83D29778F777C6C46729C3A306C80 /* Pods-Life Index-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Life Index-umbrella.h"; sourceTree = "<group>"; };
-		536D35D54CA8C8BCB245D76467E40AE9 /* KrumbsSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KrumbsSDK.framework; sourceTree = "<group>"; };
 		5AA541519D40CF0BDA98C06DD9D0D6CF /* Pods-Life IndexUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Life IndexUITests-dummy.m"; sourceTree = "<group>"; };
 		5C2F9630C58AFCA4F4BD5EED44263BB4 /* Pods-Life IndexUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Life IndexUITests-resources.sh"; sourceTree = "<group>"; };
 		5E28F3E924A2BC7B9D2748736F5240D8 /* Pods-Life IndexUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Life IndexUITests.modulemap"; sourceTree = "<group>"; };
 		66AC706833B6F33A4A10DC6C30AFD42D /* Pods-Life Index-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Life Index-resources.sh"; sourceTree = "<group>"; };
 		67A60C1915CC45C2FF0675A94189612F /* Pods-Life IndexTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Life IndexTests.modulemap"; sourceTree = "<group>"; };
+		68ECD3B2F6FCDC3F7EA0E0B00E5CE3F9 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = iOS/Crashlytics.framework; sourceTree = "<group>"; };
+		6ABED90FD5AEC43FAB2215C2761ECD76 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = iOS/Fabric.framework; sourceTree = "<group>"; };
 		6D30DEEF7FADAF0DA405360887C1FAB9 /* Pods-Life IndexTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Life IndexTests-resources.sh"; sourceTree = "<group>"; };
 		7243D1F7134063871922F9982FC2C25E /* Pods-Life IndexUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Life IndexUITests-frameworks.sh"; sourceTree = "<group>"; };
 		73E4ABFD3473AFE68660649B07C6AE47 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,6 +105,24 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		186183D8E2D368636861E51CDA427CF4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8CAB980297D0D60DEA28C9D7E33D160E /* Crashlytics */,
+				3F2D8D6DA3BD89EAD19E22677225944E /* Fabric */,
+				E036AF507A1607FEDFB231189F01DC54 /* KrumbsSDK */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3F2D8D6DA3BD89EAD19E22677225944E /* Fabric */ = {
+			isa = PBXGroup;
+			children = (
+				85F133BF56E253606EDAD0137C6F638A /* Frameworks */,
+			);
+			path = Fabric;
+			sourceTree = "<group>";
+		};
 		67134FEC76F1B33990489961C5162B07 /* Pods-Life IndexUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,18 +156,26 @@
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				E7B38A14B9BFEB499B6A56D8B174B088 /* Pods */,
+				186183D8E2D368636861E51CDA427CF4 /* Pods */,
 				768CDC527622661B49B9C862FDC30CC7 /* Products */,
 				05F7C2D4C2F5117CD3F6F855AF7DB472 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8B2F86FA1C24435802F0AEBA604ABADD /* KrumbsSDK */ = {
+		85F133BF56E253606EDAD0137C6F638A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				92F226BE3F375AD06F848FB4162FE14C /* Frameworks */,
+				6ABED90FD5AEC43FAB2215C2761ECD76 /* Fabric.framework */,
 			);
-			path = KrumbsSDK;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8CAB980297D0D60DEA28C9D7E33D160E /* Crashlytics */ = {
+			isa = PBXGroup;
+			children = (
+				E7E5D0D6748678FFE44143BF2281A12C /* Frameworks */,
+			);
+			path = Crashlytics;
 			sourceTree = "<group>";
 		};
 		922A8458E2D307CFE629AD6450F4D306 /* Pods-Life Index */ = {
@@ -166,14 +194,6 @@
 			);
 			name = "Pods-Life Index";
 			path = "Target Support Files/Pods-Life Index";
-			sourceTree = "<group>";
-		};
-		92F226BE3F375AD06F848FB4162FE14C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				536D35D54CA8C8BCB245D76467E40AE9 /* KrumbsSDK.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		95A579627F6BBB6B5B6E69716187F29B /* Pods-Life IndexTests */ = {
@@ -202,12 +222,28 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E7B38A14B9BFEB499B6A56D8B174B088 /* Pods */ = {
+		E036AF507A1607FEDFB231189F01DC54 /* KrumbsSDK */ = {
 			isa = PBXGroup;
 			children = (
-				8B2F86FA1C24435802F0AEBA604ABADD /* KrumbsSDK */,
+				E4F85192A0F5A7C5309514EF4F1CDEAD /* Frameworks */,
 			);
-			name = Pods;
+			path = KrumbsSDK;
+			sourceTree = "<group>";
+		};
+		E4F85192A0F5A7C5309514EF4F1CDEAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C0F048A13AA36E40933EE426B16D46C /* KrumbsSDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E7E5D0D6748678FFE44143BF2281A12C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				68ECD3B2F6FCDC3F7EA0E0B00E5CE3F9 /* Crashlytics.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,40 +383,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		284FC9E6CDA10BC552EAC243DC071BC6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC21615B0E377DCD5D641A347DBE0825 /* Pods-Life IndexTests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Life IndexTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Life IndexTests/Pods-Life IndexTests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Life_IndexTests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		33B56E7AB6F3C38DB13CA1028870EABE /* Debug */ = {
+		1339CA47C6718BD2765DE016FE620FAA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C0A3EFB75C2811ADE5B8942BCA5DC17E /* Pods-Life Index.debug.xcconfig */;
 			buildSettings = {
@@ -395,7 +398,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-Life Index/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Life Index/Pods-Life Index.modulemap";
@@ -413,176 +416,7 @@
 			};
 			name = Debug;
 		};
-		70ED7BA863FEDDFCA6088A0E04B5409E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		723BF214DD07CB40658AF47CDF4B1527 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 07F7B5F772DEBD7475EF2FAA9D472207 /* Pods-Life IndexUITests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Life IndexUITests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Life IndexUITests/Pods-Life IndexUITests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Life_IndexUITests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		84190DCFC9B6BFD6D21A72F5770AA652 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C566FF526E5FE8586221D2EB7E4EFD07 /* Pods-Life IndexUITests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Life IndexUITests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Life IndexUITests/Pods-Life IndexUITests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Life_IndexUITests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		ADBB8E98A90A265D2B68712724558FDC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A7222A3B3DF17DA782037DA8D77DE32C /* Pods-Life Index.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Life Index/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Life Index/Pods-Life Index.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Life_Index;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		AF022F904142748DD33F147231261A4F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F2E0EB470A969B2873C25C01437FB818 /* Pods-Life IndexTests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Life IndexTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Life IndexTests/Pods-Life IndexTests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Life_IndexTests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		E1B685D9073CDF53C548503CD4FD8B53 /* Debug */ = {
+		2CE16AC72762C01C5DC595053F1F2EF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -616,12 +450,214 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
+		};
+		62F92E2D8BFE1B474A3D5BA883F91B6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC21615B0E377DCD5D641A347DBE0825 /* Pods-Life IndexTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Life IndexTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Life IndexTests/Pods-Life IndexTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Life_IndexTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		79F6B49EF5552A4C8F9E94EB32AD19D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7222A3B3DF17DA782037DA8D77DE32C /* Pods-Life Index.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Life Index/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Life Index/Pods-Life Index.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Life_Index;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		834FB6080AB2E5DF7971AF1FEFF03B96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C566FF526E5FE8586221D2EB7E4EFD07 /* Pods-Life IndexUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Life IndexUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Life IndexUITests/Pods-Life IndexUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Life_IndexUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A096058A49F52B3734268425308908C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07F7B5F772DEBD7475EF2FAA9D472207 /* Pods-Life IndexUITests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Life IndexUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Life IndexUITests/Pods-Life IndexUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Life_IndexUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B9D6F24183F03B279FF4052AB9AC99C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2E0EB470A969B2873C25C01437FB818 /* Pods-Life IndexTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Life IndexTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Life IndexTests/Pods-Life IndexTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Life_IndexTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C6544A1F1139551CE6C6C9B43404CFA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -629,8 +665,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E1B685D9073CDF53C548503CD4FD8B53 /* Debug */,
-				70ED7BA863FEDDFCA6088A0E04B5409E /* Release */,
+				2CE16AC72762C01C5DC595053F1F2EF4 /* Debug */,
+				C6544A1F1139551CE6C6C9B43404CFA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -638,8 +674,8 @@
 		3C053345C0A50B51C16597BAE47D4B23 /* Build configuration list for PBXNativeTarget "Pods-Life Index" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				33B56E7AB6F3C38DB13CA1028870EABE /* Debug */,
-				ADBB8E98A90A265D2B68712724558FDC /* Release */,
+				1339CA47C6718BD2765DE016FE620FAA /* Debug */,
+				79F6B49EF5552A4C8F9E94EB32AD19D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -647,8 +683,8 @@
 		741BF3CF7A3003CFA9AAE458D26D8560 /* Build configuration list for PBXNativeTarget "Pods-Life IndexTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AF022F904142748DD33F147231261A4F /* Debug */,
-				284FC9E6CDA10BC552EAC243DC071BC6 /* Release */,
+				B9D6F24183F03B279FF4052AB9AC99C8 /* Debug */,
+				62F92E2D8BFE1B474A3D5BA883F91B6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -656,8 +692,8 @@
 		A3CFC9C9F897C1126EF0B220A6164270 /* Build configuration list for PBXNativeTarget "Pods-Life IndexUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				723BF214DD07CB40658AF47CDF4B1527 /* Debug */,
-				84190DCFC9B6BFD6D21A72F5770AA652 /* Release */,
+				A096058A49F52B3734268425308908C7 /* Debug */,
+				834FB6080AB2E5DF7971AF1FEFF03B96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
