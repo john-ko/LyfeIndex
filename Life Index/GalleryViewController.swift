@@ -12,6 +12,7 @@ import MBProgressHUD
 
 class GalleryViewController: UICollectionViewController, KCaptureViewControllerDelegate {
 	
+	var hud: MBProgressHUD = MBProgressHUD()
 	private let reuseIdentifier = "ImageCell"
 	private let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
 	
@@ -35,8 +36,6 @@ class GalleryViewController: UICollectionViewController, KCaptureViewControllerD
 	
 	func captureController(captureController: KCaptureViewController!, didFinishPickingMediaWithInfo media: [String : AnyObject]!) {
 	
-		self.imageView.image = media[KCaptureControllerImageUrl] as? UIImage
-		
 		let mediaJsonUrl: NSURL = (media[KCaptureControllerMediaJsonUrl] as! NSURL)
 		NSLog("MediaJsonUrl: ", mediaJsonUrl)
 		
@@ -51,10 +50,25 @@ class GalleryViewController: UICollectionViewController, KCaptureViewControllerD
 		let completionState = String(media[KCaptureControllerCompletionState]?.intValue)
 		NSLog("Capture Completion State: ", completionState)
 		
+		self.tagAndStoreImage(mediaJsonUrl, image: media[KCaptureControllerImageUrl])
 	}
 	
 	private func tagAndStoreImage(mediaJsonUrl: NSURL, image: UIImage) {
+		// show progress hud
+		hud.show(true)
 		
+		// Instantiate realm object for persistent local storage
+		var lifeImage = LifeImage(mediaJsonUrl, image)
+
+		// Instantiate tagging api for json fetching and parsing
+		let taggingApi = TaggingAPI()
+		
+		// request mediaJson object
+		dispatch_async(dispatch_get_main_queue()) {
+			
+			// remove progress hud
+			hud.hide(true)
+		}
 	}
 	
 	func captureControllerDidCancel(captureController: KCaptureViewController!) {

@@ -9,7 +9,16 @@
 import Foundation
 
 class LifeImage: RLMObject {
-	dynamic var id: String = ""
+	
+	dynamic var imageId: String = ""
 	dynamic var image: UIImage? = nil
-	dynamic var tags: [String] = []
+	let imageTags =  List<String>
+	
+	init (imageUrl: String) {
+		self.imageId = imageUrl
+	}
+	
+	override static func primaryKey() -> String? {
+		return "imageId"
+	}
 }

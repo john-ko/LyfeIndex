@@ -23,6 +23,7 @@
 		7A374FA81C87E15300C1D798 /* GalleryImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A374FA71C87E15300C1D798 /* GalleryImageCell.swift */; };
 		7A374FAA1C87E1AE00C1D798 /* ImageSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A374FA91C87E1AE00C1D798 /* ImageSearcher.swift */; };
 		7A3EC2FD1C88A9AA0086D188 /* LifeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3EC2FC1C88A9AA0086D188 /* LifeImage.swift */; };
+		7AAF72981C8F7E5000308906 /* InvertedIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAF72971C8F7E5000308906 /* InvertedIndex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		7A374FA71C87E15300C1D798 /* GalleryImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryImageCell.swift; sourceTree = "<group>"; };
 		7A374FA91C87E1AE00C1D798 /* ImageSearcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSearcher.swift; sourceTree = "<group>"; };
 		7A3EC2FC1C88A9AA0086D188 /* LifeImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeImage.swift; sourceTree = "<group>"; };
+		7AAF72971C8F7E5000308906 /* InvertedIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvertedIndex.swift; sourceTree = "<group>"; };
 		91B48458FCD1A617F773B8F0 /* Pods-Life IndexTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Life IndexTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Life IndexTests/Pods-Life IndexTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A49ECB85048F4CBA8A17EC0E /* Pods_Life_Index.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Life_Index.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF3403C3D1201DFB4AAF9483 /* Pods-Life IndexUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Life IndexUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Life IndexUITests/Pods-Life IndexUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				7A374FA91C87E1AE00C1D798 /* ImageSearcher.swift */,
 				7A3397EC1C829B820010D3FF /* GalleryViewController.swift */,
 				7A3EC2FC1C88A9AA0086D188 /* LifeImage.swift */,
+				7AAF72971C8F7E5000308906 /* InvertedIndex.swift */,
 				7A3397C21C829B260010D3FF /* Main.storyboard */,
 				7A3397F01C829EBA0010D3FF /* Life Index-Bridging-Header.h */,
 				7A3397F11C82A2DD0010D3FF /* Images.xcassets */,
@@ -495,6 +498,7 @@
 				7A374FA81C87E15300C1D798 /* GalleryImageCell.swift in Sources */,
 				7A3EC2FD1C88A9AA0086D188 /* LifeImage.swift in Sources */,
 				7A3397BF1C829B260010D3FF /* AppDelegate.swift in Sources */,
+				7AAF72981C8F7E5000308906 /* InvertedIndex.swift in Sources */,
 				7A374FA61C87DCF200C1D798 /* TaggingAPI.swift in Sources */,
 				7A3397EE1C829B820010D3FF /* GalleryViewController.swift in Sources */,
 				7A374FAA1C87E1AE00C1D798 /* ImageSearcher.swift in Sources */,
