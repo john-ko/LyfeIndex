@@ -85,9 +85,11 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${PODS_ROOT}/KrumbsSDK/KrumbsSDK.framework"
+  install_framework "Pods-Life Index/MBProgressHUD.framework"
   install_framework "Pods-Life Index/Realm.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${PODS_ROOT}/KrumbsSDK/KrumbsSDK.framework"
+  install_framework "Pods-Life Index/MBProgressHUD.framework"
   install_framework "Pods-Life Index/Realm.framework"
 fi

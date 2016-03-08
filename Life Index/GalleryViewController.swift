@@ -8,6 +8,7 @@
 
 import UIKit
 import KrumbsSDK
+import MBProgressHUD
 
 class GalleryViewController: UICollectionViewController, KCaptureViewControllerDelegate {
 	
@@ -49,6 +50,10 @@ class GalleryViewController: UICollectionViewController, KCaptureViewControllerD
 		
 		let completionState = String(media[KCaptureControllerCompletionState]?.intValue)
 		NSLog("Capture Completion State: ", completionState)
+		
+	}
+	
+	private func tagAndStoreImage(mediaJsonUrl: NSURL, image: UIImage) {
 		
 	}
 	
