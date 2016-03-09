@@ -10,12 +10,15 @@ import Foundation
 
 class LifeImage: RLMObject {
 	
-	dynamic var imageId: String = ""
-	dynamic var image: UIImage? = nil
-	let imageTags =  List<String>
+	dynamic var imageId: String
+	dynamic var largeImage: UIImage? = nil
+	dynamic var thumbnail: UIImage? = nil
+	
+	var imageTags: [String] = []
 	
 	init (imageUrl: String) {
 		self.imageId = imageUrl
+		super.init()
 	}
 	
 	override static func primaryKey() -> String? {

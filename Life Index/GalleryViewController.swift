@@ -12,16 +12,16 @@ import MBProgressHUD
 
 class GalleryViewController: UICollectionViewController, KCaptureViewControllerDelegate {
 	
-	var hud: MBProgressHUD = MBProgressHUD()
+	private var hud: MBProgressHUD = MBProgressHUD()
+	
 	private let reuseIdentifier = "ImageCell"
 	private let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
 	
-	//private var searches = [FlickrSearchResults]()
-//	private let flickr = Flickr()
+	private var searches = [SearchResults]()
 	
-//	func photoForIndexPath(indexPath: NSIndexPath) -> FlickrPhoto {
-//		return searches[indexPath.section].searchResults[indexPath.row]
-//	}
+	func photoForIndexPath(indexPath: NSIndexPath) -> UIImage {
+		return searches[indexPath.section].searchResults[indexPath.row]
+	}
 	
 	let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
 	
@@ -50,7 +50,7 @@ class GalleryViewController: UICollectionViewController, KCaptureViewControllerD
 		let completionState = String(media[KCaptureControllerCompletionState]?.intValue)
 		NSLog("Capture Completion State: ", completionState)
 		
-		self.tagAndStoreImage(mediaJsonUrl, image: media[KCaptureControllerImageUrl])
+		self.tagAndStoreImage(mediaJsonUrl, image: (media[KCaptureControllerImageUrl] as! UIImage))
 	}
 	
 	private func tagAndStoreImage(mediaJsonUrl: NSURL, image: UIImage) {
@@ -58,7 +58,7 @@ class GalleryViewController: UICollectionViewController, KCaptureViewControllerD
 		hud.show(true)
 		
 		// Instantiate realm object for persistent local storage
-		var lifeImage = LifeImage(mediaJsonUrl, image)
+		//var lifeImage = LifeImage(mediaJsonUrl, image)
 
 		// Instantiate tagging api for json fetching and parsing
 		let taggingApi = TaggingAPI()
@@ -67,7 +67,7 @@ class GalleryViewController: UICollectionViewController, KCaptureViewControllerD
 		dispatch_async(dispatch_get_main_queue()) {
 			
 			// remove progress hud
-			hud.hide(true)
+			//hud.hide(true)
 		}
 	}
 	
@@ -80,7 +80,6 @@ class GalleryViewController: UICollectionViewController, KCaptureViewControllerD
 		
 		// Do any additional setup after loading the view.
 	}
-	
 	
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
@@ -98,27 +97,25 @@ class GalleryViewController: UICollectionViewController, KCaptureViewControllerD
 	*/
 	
 }
-/*
+
 extension GalleryViewController {
-	//1
+	
 	override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
 		return searches.count
 	}
 	
-	//2
 	override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		return searches[section].searchResults.count
 	}
 	
-	//3
 	override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-		//1
+		
 		let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! GalleryImageCell
-		//2
-		let flickrPhoto = photoForIndexPath(indexPath)
+		
+		let photo = photoForIndexPath(indexPath)
 		cell.backgroundColor = UIColor.blackColor()
-		//3
-		cell.imageView.image = flickrPhoto.thumbnail
+		
+		cell.imageView.image = photo
 		
 		return cell
 	}
@@ -126,30 +123,20 @@ extension GalleryViewController {
 
 extension GalleryViewController: UITextFieldDelegate {
 	func textFieldShouldReturn(textField: UITextField) -> Bool {
-		// 1
+		
 		let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
 		textField.addSubview(activityIndicator)
 		activityIndicator.frame = textField.bounds
 		activityIndicator.startAnimating()
-		flickr.searchFlickrForTerm(textField.text!) {
-			results, error in
-			
-			//2
-			activityIndicator.removeFromSuperview()
-			if error != nil {
-				print("Error searching : \(error)")
-			}
-			
-			if results != nil {
-				//3
-				print("Found \(results!.searchResults.count) matching \(results!.searchTerm)")
-				self.searches.insert(results!, atIndex: 0)
-				
-				//4
-				self.collectionView?.reloadData()
-			}
-		}
+		let searcher = ImageSearcher()
+		let results = searcher.searchLifeIndexForImage(textField.text!)
+		activityIndicator.removeFromSuperview()
 		
+		print("Found \(results.searchResults.count) matching \(results.searchQuery)")
+		self.searches.insert(results, atIndex: 0)
+		
+		self.collectionView?.reloadData()
+	
 		textField.text = nil
 		textField.resignFirstResponder()
 		return true
@@ -157,26 +144,24 @@ extension GalleryViewController: UITextFieldDelegate {
 }
 
 extension GalleryViewController: UICollectionViewDelegateFlowLayout {
-	//1
+	
 	func collectionView(collectionView: UICollectionView,
 		layout collectionViewLayout: UICollectionViewLayout,
 		sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
 			
-			let flickrPhoto =  photoForIndexPath(indexPath)
+		/*	let flickrPhoto =  photoForIndexPath(indexPath)
 			//2
 			if var size = flickrPhoto.thumbnail?.size {
 				size.width += 10
 				size.height += 10
 				return size
-			}
+			} */
 			return CGSize(width: 100, height: 100)
 	}
 	
-	//3
 	func collectionView(collectionView: UICollectionView,
 		layout collectionViewLayout: UICollectionViewLayout,
 		insetForSectionAtIndex section: Int) -> UIEdgeInsets {
 			return sectionInsets
 	}
 }
-*/

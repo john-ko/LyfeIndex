@@ -15,7 +15,7 @@ import UIKit
 
 class TaggingAPI {
 	
-	var API_KEY = "###"
+	var API_KEY = "AIzaSyDH6PSfBe2ZKV20TeeFKW7jlTxf4u3rFFU"
 	
 	func resizeImage(imageSize: CGSize, image: UIImage) -> NSData {
 		UIGraphicsBeginImageContext(imageSize)
@@ -70,6 +70,8 @@ class TaggingAPI {
 		
 	}
 	
+	
+	
 	func parseJson(jsonData: NSString) -> [String] {
 		let data = jsonData.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!
 		
@@ -123,6 +125,51 @@ class TaggingAPI {
 	func postImage(myImage: UIImage?, callback: ([String]) -> Void) {
 		createRequest(base64EncodeImage(myImage!.resizeToWidth(500)), callback:callback)
 	}
+	
+	
+	
+	// added krumbs
+	// usage
+	// let taggingAPI = TaggingAPI()
+	// taggingAPI.getKrumbsJSON("http://uciphotos.ngss.uci.krumbs.io/event/ngxcHvvLw1", callback:callbackFunction)
+	// func callbackFunction([String:AnyObject) {
+	//     // do stuff here
+	// }
+	func getKrumbsJSON(url: String, callback:  ([String:AnyObject]) -> Void) {
+		let request = NSMutableURLRequest(URL: NSURL(string: url)!)
+		request.HTTPMethod = "GET"
+		
+		let session = NSURLSession.sharedSession()
+		
+		// run the request
+		let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
+			print(NSString(data: data!, encoding: NSUTF8StringEncoding)!)
+			
+			let response = self.convertStringToDictionary(NSString(data: data!, encoding: NSUTF8StringEncoding)! as String)
+			let media = response!["media"]![0] as! [String: AnyObject]
+			let why = media["why"] as? [AnyObject]
+			
+			var results = [String:AnyObject]()
+			results["title"] = response!["title"]
+			results["caption"] = media["caption"]
+			results["time"] = response!["start_time"]
+			results["intent"] = why![0]["intent_name"]
+			callback(results)
+		})
+		task.resume()
+	}
+	
+	func convertStringToDictionary(text: String) -> [String:AnyObject]? {
+		if let data = text.dataUsingEncoding(NSUTF8StringEncoding) {
+			do {
+				return try NSJSONSerialization.JSONObjectWithData(data, options: []) as? [String:AnyObject]
+			} catch let error as NSError {
+				print(error)
+			}
+		}
+		return nil
+	}
+	
 }
 
 extension UIImage {

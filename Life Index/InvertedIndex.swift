@@ -10,11 +10,12 @@ import Foundation
 
 class InvertedIndex: RLMObject {
 	
-	dynamic var tagId: String = ""
-	dynamic var imageIds = List<String>
+	dynamic var tagId: String
+	var imageIds: [String] = []
 	
 	init (keyword: String) {
 		self.tagId = keyword
+		super.init()
 	}
 	
 	override static func primaryKey() -> String? {
