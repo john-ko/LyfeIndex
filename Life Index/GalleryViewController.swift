@@ -8,11 +8,8 @@
 
 import UIKit
 import KrumbsSDK
-import MBProgressHUD
 
 class GalleryViewController: UICollectionViewController, KCaptureViewControllerDelegate {
-	
-	private var hud: MBProgressHUD = MBProgressHUD()
 	
 	private let reuseIdentifier = "ImageCell"
 	private let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
@@ -55,7 +52,6 @@ class GalleryViewController: UICollectionViewController, KCaptureViewControllerD
 	
 	private func tagAndStoreImage(mediaJsonUrl: NSURL, image: UIImage) {
 		// show progress hud
-		hud.show(true)
 		
 		// Instantiate realm object for persistent local storage
 		//var lifeImage = LifeImage(mediaJsonUrl, image)

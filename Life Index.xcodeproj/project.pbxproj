@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E18AD69F980631A30762996 /* Pods_Life_Index.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A49ECB85048F4CBA8A17EC0E /* Pods_Life_Index.framework */; };
-		6F2C9D996209D7022624CB6D /* Pods_Life_IndexTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EAEFA864CBA5A0CE3AF5272 /* Pods_Life_IndexTests.framework */; };
-		79B976A2E9FD3D90C0E2858B /* Pods_Life_IndexUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA239714D8890A97D76B2CB9 /* Pods_Life_IndexUITests.framework */; };
 		7A3397BF1C829B260010D3FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3397BE1C829B260010D3FF /* AppDelegate.swift */; };
 		7A3397C41C829B260010D3FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A3397C21C829B260010D3FF /* Main.storyboard */; };
 		7A3397C91C829B260010D3FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A3397C71C829B260010D3FF /* LaunchScreen.storyboard */; };
@@ -24,6 +21,9 @@
 		7A374FAA1C87E1AE00C1D798 /* ImageSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A374FA91C87E1AE00C1D798 /* ImageSearcher.swift */; };
 		7A3EC2FD1C88A9AA0086D188 /* LifeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3EC2FC1C88A9AA0086D188 /* LifeImage.swift */; };
 		7AAF72981C8F7E5000308906 /* InvertedIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAF72971C8F7E5000308906 /* InvertedIndex.swift */; };
+		7AF3B8011C9112E6004CCCED /* KrumbsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF3B8001C9112E6004CCCED /* KrumbsSDK.framework */; };
+		7AF3B8041C911330004CCCED /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF3B8021C911330004CCCED /* Realm.framework */; };
+		7AF3B8051C911330004CCCED /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF3B8031C911330004CCCED /* RealmSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,10 +57,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		19C7BEEFC035B081EE8016EC /* Pods-Life IndexUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Life IndexUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Life IndexUITests/Pods-Life IndexUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		30305F130064FFB89B940D77 /* Pods-Life IndexTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Life IndexTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Life IndexTests/Pods-Life IndexTests.release.xcconfig"; sourceTree = "<group>"; };
-		5EAEFA864CBA5A0CE3AF5272 /* Pods_Life_IndexTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Life_IndexTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6515921888CEEF7ECA041C10 /* Pods-Life Index.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Life Index.release.xcconfig"; path = "Pods/Target Support Files/Pods-Life Index/Pods-Life Index.release.xcconfig"; sourceTree = "<group>"; };
 		7A3397BB1C829B260010D3FF /* Life Index.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Life Index.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A3397BE1C829B260010D3FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A3397C31C829B260010D3FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,11 +78,9 @@
 		7A374FA91C87E1AE00C1D798 /* ImageSearcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSearcher.swift; sourceTree = "<group>"; };
 		7A3EC2FC1C88A9AA0086D188 /* LifeImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeImage.swift; sourceTree = "<group>"; };
 		7AAF72971C8F7E5000308906 /* InvertedIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvertedIndex.swift; sourceTree = "<group>"; };
-		91B48458FCD1A617F773B8F0 /* Pods-Life IndexTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Life IndexTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Life IndexTests/Pods-Life IndexTests.debug.xcconfig"; sourceTree = "<group>"; };
-		A49ECB85048F4CBA8A17EC0E /* Pods_Life_Index.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Life_Index.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF3403C3D1201DFB4AAF9483 /* Pods-Life IndexUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Life IndexUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Life IndexUITests/Pods-Life IndexUITests.release.xcconfig"; sourceTree = "<group>"; };
-		DB4EB93B97024CCF7E0CCBD7 /* Pods-Life Index.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Life Index.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Life Index/Pods-Life Index.debug.xcconfig"; sourceTree = "<group>"; };
-		EA239714D8890A97D76B2CB9 /* Pods_Life_IndexUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Life_IndexUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AF3B8001C9112E6004CCCED /* KrumbsSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KrumbsSDK.framework; path = "Life Index/KrumbsSDK/KrumbsSDK.framework"; sourceTree = "<group>"; };
+		7AF3B8021C911330004CCCED /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "Life Index/RealmSDK/Realm.framework"; sourceTree = "<group>"; };
+		7AF3B8031C911330004CCCED /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "Life Index/RealmSDK/RealmSwift.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +88,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E18AD69F980631A30762996 /* Pods_Life_Index.framework in Frameworks */,
+				7AF3B8011C9112E6004CCCED /* KrumbsSDK.framework in Frameworks */,
+				7AF3B8041C911330004CCCED /* Realm.framework in Frameworks */,
+				7AF3B8051C911330004CCCED /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,7 +98,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F2C9D996209D7022624CB6D /* Pods_Life_IndexTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +105,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79B976A2E9FD3D90C0E2858B /* Pods_Life_IndexUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,12 +114,13 @@
 		7A3397B21C829B260010D3FF = {
 			isa = PBXGroup;
 			children = (
+				7AF3B8021C911330004CCCED /* Realm.framework */,
+				7AF3B8031C911330004CCCED /* RealmSwift.framework */,
+				7AF3B8001C9112E6004CCCED /* KrumbsSDK.framework */,
 				7A3397BD1C829B260010D3FF /* Life Index */,
 				7A3397D21C829B260010D3FF /* Life IndexTests */,
 				7A3397DD1C829B260010D3FF /* Life IndexUITests */,
 				7A3397BC1C829B260010D3FF /* Products */,
-				A11D34643AF34A372DD32790 /* Pods */,
-				CA0C6E7205D868D513A0A794 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -178,29 +173,6 @@
 			path = "Life IndexUITests";
 			sourceTree = "<group>";
 		};
-		A11D34643AF34A372DD32790 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				DB4EB93B97024CCF7E0CCBD7 /* Pods-Life Index.debug.xcconfig */,
-				6515921888CEEF7ECA041C10 /* Pods-Life Index.release.xcconfig */,
-				91B48458FCD1A617F773B8F0 /* Pods-Life IndexTests.debug.xcconfig */,
-				30305F130064FFB89B940D77 /* Pods-Life IndexTests.release.xcconfig */,
-				19C7BEEFC035B081EE8016EC /* Pods-Life IndexUITests.debug.xcconfig */,
-				BF3403C3D1201DFB4AAF9483 /* Pods-Life IndexUITests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		CA0C6E7205D868D513A0A794 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A49ECB85048F4CBA8A17EC0E /* Pods_Life_Index.framework */,
-				5EAEFA864CBA5A0CE3AF5272 /* Pods_Life_IndexTests.framework */,
-				EA239714D8890A97D76B2CB9 /* Pods_Life_IndexUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -208,12 +180,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A3397E31C829B260010D3FF /* Build configuration list for PBXNativeTarget "Life Index" */;
 			buildPhases = (
-				4F5154DED84EBA7A91338CCB /* Check Pods Manifest.lock */,
 				7A3397B71C829B260010D3FF /* Sources */,
 				7A3397B81C829B260010D3FF /* Frameworks */,
 				7A3397B91C829B260010D3FF /* Resources */,
-				3E7E6CE58DA7BBDDB8DB67AC /* Embed Pods Frameworks */,
-				8E401BB1012421C3890EC97E /* Copy Pods Resources */,
 				7AD1CB9F1C889E0D0083826B /* Embed Frameworks */,
 				7A3EC2FE1C8CB4E30086D188 /* ShellScript */,
 				7AFC18F91C8D367300690E54 /* ShellScript */,
@@ -231,12 +200,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A3397E61C829B260010D3FF /* Build configuration list for PBXNativeTarget "Life IndexTests" */;
 			buildPhases = (
-				6203BCF0A6AC83FE127374C7 /* Check Pods Manifest.lock */,
 				7A3397CB1C829B260010D3FF /* Sources */,
 				7A3397CC1C829B260010D3FF /* Frameworks */,
 				7A3397CD1C829B260010D3FF /* Resources */,
-				925B68A581656B407B50FCA9 /* Embed Pods Frameworks */,
-				584E856951DD59157DEB2DD6 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -252,11 +218,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A3397E91C829B260010D3FF /* Build configuration list for PBXNativeTarget "Life IndexUITests" */;
 			buildPhases = (
-				6AECA1F3B106394CEBF3C1BD /* Check Pods Manifest.lock */,
 				7A3397D61C829B260010D3FF /* Sources */,
 				7A3397D71C829B260010D3FF /* Frameworks */,
 				7A3397D81C829B260010D3FF /* Resources */,
-				4744A4FC8DEF28ECE21F3D96 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -342,96 +306,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3E7E6CE58DA7BBDDB8DB67AC /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Life Index/Pods-Life Index-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4744A4FC8DEF28ECE21F3D96 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Life IndexUITests/Pods-Life IndexUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4F5154DED84EBA7A91338CCB /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		584E856951DD59157DEB2DD6 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Life IndexTests/Pods-Life IndexTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6203BCF0A6AC83FE127374C7 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		6AECA1F3B106394CEBF3C1BD /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		7A3EC2FE1C8CB4E30086D188 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -457,36 +331,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"";
-		};
-		8E401BB1012421C3890EC97E /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Life Index/Pods-Life Index-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		925B68A581656B407B50FCA9 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Life IndexTests/Pods-Life IndexTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -639,7 +483,6 @@
 		};
 		7A3397E41C829B260010D3FF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB4EB93B97024CCF7E0CCBD7 /* Pods-Life Index.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -651,6 +494,10 @@
 					/Users/Atomisk/Dropbox/Winter,
 					2016/CS,
 					"125/Project/Life-Index",
+					"$(PROJECT_DIR)/Life",
+					Index/KrumbsSDK,
+					"$(PROJECT_DIR)/Life",
+					Index/RealmSDK,
 				);
 				INFOPLIST_FILE = "Life Index/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -658,13 +505,12 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Life Index/Life Index-Bridging-Header.h";
-				USER_HEADER_SEARCH_PATHS = "Pods/**";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
 		7A3397E51C829B260010D3FF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6515921888CEEF7ECA041C10 /* Pods-Life Index.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -676,6 +522,10 @@
 					/Users/Atomisk/Dropbox/Winter,
 					2016/CS,
 					"125/Project/Life-Index",
+					"$(PROJECT_DIR)/Life",
+					Index/KrumbsSDK,
+					"$(PROJECT_DIR)/Life",
+					Index/RealmSDK,
 				);
 				INFOPLIST_FILE = "Life Index/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -683,13 +533,12 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Life Index/Life Index-Bridging-Header.h";
-				USER_HEADER_SEARCH_PATHS = "Pods/**";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
 		7A3397E71C829B260010D3FF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91B48458FCD1A617F773B8F0 /* Pods-Life IndexTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "Life IndexTests/Info.plist";
@@ -702,7 +551,6 @@
 		};
 		7A3397E81C829B260010D3FF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 30305F130064FFB89B940D77 /* Pods-Life IndexTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "Life IndexTests/Info.plist";
@@ -715,7 +563,6 @@
 		};
 		7A3397EA1C829B260010D3FF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 19C7BEEFC035B081EE8016EC /* Pods-Life IndexUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "Life IndexUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -728,7 +575,6 @@
 		};
 		7A3397EB1C829B260010D3FF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF3403C3D1201DFB4AAF9483 /* Pods-Life IndexUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "Life IndexUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
