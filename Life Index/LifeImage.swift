@@ -17,4 +17,7 @@ class LifeImage: Object {
 	
 	var imageTags: [String] = []
 	
+	override static func primaryKey() -> String? {
+		return "imageId"
+	}
 }

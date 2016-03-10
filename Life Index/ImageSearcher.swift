@@ -22,13 +22,29 @@ class ImageSearcher {
 		let searchTags: [String] = self.removeStopWords(self.tokenizeQuery(searchQuery))
 		print("Query: \(searchQuery) normalized to: \(searchTags)")
 
-		var results: SearchResults = SearchResults(searchQuery: searchQuery, searchResults: [])
+		var searchResults: SearchResults = SearchResults(searchQuery: searchQuery, searchResults: [])
 		var indexObjects: [InvertedIndex] = []
-		
-		let realm = try! Realm()
-		let io = realm.objects(InvertedIndex)
+		var lifeImages: [LifeImage] = []
 
-		return results
+		let realm = try! Realm()
+
+		for i in 0...searchTags.count {
+			let indexObject = realm.objectForPrimaryKey(InvertedIndex.self, key: searchTags[i])
+			indexObjects.append(indexObject!)
+		}
+		
+		for i in 0...indexObjects.count {
+			for j in 0...indexObjects[i].imageIds.count {
+				let lifeImage = realm.objectForPrimaryKey(LifeImage.self, key: indexObjects[i].imageIds[j])
+				lifeImages.append(lifeImage!)
+			}
+		}
+		
+		for i in 0...lifeImages.count {
+			searchResults.searchResults.append(lifeImages[i].largeImage!)
+		}
+
+		return searchResults
 	}
 
 	// returns a list of space delimited tokens

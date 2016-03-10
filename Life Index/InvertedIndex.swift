@@ -14,4 +14,7 @@ class InvertedIndex: Object {
 	dynamic var tagId: String = ""
 	var imageIds: [String] = []
 	
+	override static func primaryKey() -> String? {
+		return "tagId"
+	}
 }
