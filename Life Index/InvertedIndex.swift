@@ -6,19 +6,12 @@
 //  Copyright © 2016 CS125. All rights reserved.
 //
 
-import Foundation
+import UIKit
+import RealmSwift
 
-class InvertedIndex: RLMObject {
+class InvertedIndex: Object {
 	
-	dynamic var tagId: String
+	dynamic var tagId: String = ""
 	var imageIds: [String] = []
 	
-	init (keyword: String) {
-		self.tagId = keyword
-		super.init()
-	}
-	
-	override static func primaryKey() -> String? {
-		return "tagId"
-	}
 }

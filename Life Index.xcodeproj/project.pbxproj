@@ -21,9 +21,12 @@
 		7A374FAA1C87E1AE00C1D798 /* ImageSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A374FA91C87E1AE00C1D798 /* ImageSearcher.swift */; };
 		7A3EC2FD1C88A9AA0086D188 /* LifeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3EC2FC1C88A9AA0086D188 /* LifeImage.swift */; };
 		7AAF72981C8F7E5000308906 /* InvertedIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAF72971C8F7E5000308906 /* InvertedIndex.swift */; };
-		7AF3B8011C9112E6004CCCED /* KrumbsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF3B8001C9112E6004CCCED /* KrumbsSDK.framework */; };
-		7AF3B8041C911330004CCCED /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF3B8021C911330004CCCED /* Realm.framework */; };
-		7AF3B8051C911330004CCCED /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF3B8031C911330004CCCED /* RealmSwift.framework */; };
+		7AF3B8151C911C99004CCCED /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF3B8131C911C99004CCCED /* Realm.framework */; };
+		7AF3B8161C911C99004CCCED /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF3B8131C911C99004CCCED /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7AF3B8171C911C99004CCCED /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF3B8141C911C99004CCCED /* RealmSwift.framework */; };
+		7AF3B8181C911C99004CCCED /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF3B8141C911C99004CCCED /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7AF3B81A1C911CBE004CCCED /* KrumbsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF3B8191C911CBE004CCCED /* KrumbsSDK.framework */; };
+		7AF3B81B1C911CBE004CCCED /* KrumbsSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF3B8191C911CBE004CCCED /* KrumbsSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,12 +47,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		7AD1CB9F1C889E0D0083826B /* Embed Frameworks */ = {
+		7AF3B80F1C911BE0004CCCED /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				7AF3B8181C911C99004CCCED /* RealmSwift.framework in Embed Frameworks */,
+				7AF3B8161C911C99004CCCED /* Realm.framework in Embed Frameworks */,
+				7AF3B81B1C911CBE004CCCED /* KrumbsSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -69,7 +75,6 @@
 		7A3397DE1C829B260010D3FF /* Life_IndexUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Life_IndexUITests.swift; sourceTree = "<group>"; };
 		7A3397E01C829B260010D3FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A3397EC1C829B820010D3FF /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
-		7A3397F01C829EBA0010D3FF /* Life Index-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Life Index-Bridging-Header.h"; sourceTree = "<group>"; };
 		7A3397F11C82A2DD0010D3FF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7A3397F21C82A2DD0010D3FF /* IntentResourcesExample.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IntentResourcesExample.bundle; sourceTree = "<group>"; };
 		7A3397F31C82A2DD0010D3FF /* IntentResourcesExample.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = IntentResourcesExample.xcassets; sourceTree = "<group>"; };
@@ -77,10 +82,11 @@
 		7A374FA71C87E15300C1D798 /* GalleryImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryImageCell.swift; sourceTree = "<group>"; };
 		7A374FA91C87E1AE00C1D798 /* ImageSearcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSearcher.swift; sourceTree = "<group>"; };
 		7A3EC2FC1C88A9AA0086D188 /* LifeImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeImage.swift; sourceTree = "<group>"; };
+		7A46B6001C913F4D00CD6E33 /* Life Index-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Life Index-Bridging-Header.h"; sourceTree = "<group>"; };
 		7AAF72971C8F7E5000308906 /* InvertedIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvertedIndex.swift; sourceTree = "<group>"; };
-		7AF3B8001C9112E6004CCCED /* KrumbsSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KrumbsSDK.framework; path = "Life Index/KrumbsSDK/KrumbsSDK.framework"; sourceTree = "<group>"; };
-		7AF3B8021C911330004CCCED /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "Life Index/RealmSDK/Realm.framework"; sourceTree = "<group>"; };
-		7AF3B8031C911330004CCCED /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "Life Index/RealmSDK/RealmSwift.framework"; sourceTree = "<group>"; };
+		7AF3B8131C911C99004CCCED /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		7AF3B8141C911C99004CCCED /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		7AF3B8191C911CBE004CCCED /* KrumbsSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KrumbsSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,9 +94,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AF3B8011C9112E6004CCCED /* KrumbsSDK.framework in Frameworks */,
-				7AF3B8041C911330004CCCED /* Realm.framework in Frameworks */,
-				7AF3B8051C911330004CCCED /* RealmSwift.framework in Frameworks */,
+				7AF3B8171C911C99004CCCED /* RealmSwift.framework in Frameworks */,
+				7AF3B8151C911C99004CCCED /* Realm.framework in Frameworks */,
+				7AF3B81A1C911CBE004CCCED /* KrumbsSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,9 +120,9 @@
 		7A3397B21C829B260010D3FF = {
 			isa = PBXGroup;
 			children = (
-				7AF3B8021C911330004CCCED /* Realm.framework */,
-				7AF3B8031C911330004CCCED /* RealmSwift.framework */,
-				7AF3B8001C9112E6004CCCED /* KrumbsSDK.framework */,
+				7AF3B8191C911CBE004CCCED /* KrumbsSDK.framework */,
+				7AF3B8131C911C99004CCCED /* Realm.framework */,
+				7AF3B8141C911C99004CCCED /* RealmSwift.framework */,
 				7A3397BD1C829B260010D3FF /* Life Index */,
 				7A3397D21C829B260010D3FF /* Life IndexTests */,
 				7A3397DD1C829B260010D3FF /* Life IndexUITests */,
@@ -144,8 +150,8 @@
 				7A3397EC1C829B820010D3FF /* GalleryViewController.swift */,
 				7A3EC2FC1C88A9AA0086D188 /* LifeImage.swift */,
 				7AAF72971C8F7E5000308906 /* InvertedIndex.swift */,
+				7A46B6001C913F4D00CD6E33 /* Life Index-Bridging-Header.h */,
 				7A3397C21C829B260010D3FF /* Main.storyboard */,
-				7A3397F01C829EBA0010D3FF /* Life Index-Bridging-Header.h */,
 				7A3397F11C82A2DD0010D3FF /* Images.xcassets */,
 				7A3397F21C82A2DD0010D3FF /* IntentResourcesExample.bundle */,
 				7A3397F31C82A2DD0010D3FF /* IntentResourcesExample.xcassets */,
@@ -183,9 +189,7 @@
 				7A3397B71C829B260010D3FF /* Sources */,
 				7A3397B81C829B260010D3FF /* Frameworks */,
 				7A3397B91C829B260010D3FF /* Resources */,
-				7AD1CB9F1C889E0D0083826B /* Embed Frameworks */,
-				7A3EC2FE1C8CB4E30086D188 /* ShellScript */,
-				7AFC18F91C8D367300690E54 /* ShellScript */,
+				7AF3B80F1C911BE0004CCCED /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -304,35 +308,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		7A3EC2FE1C8CB4E30086D188 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Fabric/run\" 473d136a591585d2ead4c4fd536b6ac6ccba8cdb 88c5fdf0aa7dad3b772e3a5be9a325bd13a6c459a4d54d76f5013e9252ca1c09";
-		};
-		7AFC18F91C8D367300690E54 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7A3397B71C829B260010D3FF /* Sources */ = {
@@ -491,19 +466,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					/Users/Atomisk/Dropbox/Winter,
-					2016/CS,
-					"125/Project/Life-Index",
-					"$(PROJECT_DIR)/Life",
-					Index/KrumbsSDK,
-					"$(PROJECT_DIR)/Life",
-					Index/RealmSDK,
 				);
 				INFOPLIST_FILE = "Life Index/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.CS125.Life-Index.Life-Index";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Life Index/Life Index-Bridging-Header.h";
 				USER_HEADER_SEARCH_PATHS = "";
 			};
@@ -519,19 +488,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					/Users/Atomisk/Dropbox/Winter,
-					2016/CS,
-					"125/Project/Life-Index",
-					"$(PROJECT_DIR)/Life",
-					Index/KrumbsSDK,
-					"$(PROJECT_DIR)/Life",
-					Index/RealmSDK,
 				);
 				INFOPLIST_FILE = "Life Index/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.CS125.Life-Index.Life-Index";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Life Index/Life Index-Bridging-Header.h";
 				USER_HEADER_SEARCH_PATHS = "";
 			};
@@ -541,10 +504,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = "Life IndexTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.CS125.Life-Index.Life-IndexTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Life Index/Life Index-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Life Index.app/Life Index";
 			};
 			name = Debug;
@@ -553,10 +518,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = "Life IndexTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.CS125.Life-Index.Life-IndexTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Life Index/Life Index-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Life Index.app/Life Index";
 			};
 			name = Release;

@@ -6,8 +6,8 @@
 //  Copyright © 2016 CS125. All rights reserved.
 //
 
-import Foundation
 import UIKit
+import RealmSwift
 
 struct SearchResults {
 	let searchQuery : String
@@ -23,13 +23,10 @@ class ImageSearcher {
 		print("Query: \(searchQuery) normalized to: \(searchTags)")
 
 		var results: SearchResults = SearchResults(searchQuery: searchQuery, searchResults: [])
-		var indexObjects: [RLMResults] = []
-		var predicateFormat: String = "%@ == %@"
-		var args: [CVarArgType] = searchTags
+		var indexObjects: [InvertedIndex] = []
 		
-		Realm.Object
-		
-		indexObjects.append(InvertedIndex.objectsWhere(predicateFormat, args: args))
+		let realm = try! Realm()
+		let io = realm.objects(InvertedIndex)
 
 		return results
 	}
@@ -41,21 +38,11 @@ class ImageSearcher {
 	}
 
 	private func removeStopWords(var list: [String]) -> [String] {
-		return list.removeObjectsInArray(self.stopWords)
-	}
-}
-
-extension Array where Element: String {
-
-	mutating func removeObject(object: Element) {
-		if let index = self.indexOf(object) {
-			self.removeAtIndex(index)
+		for word in self.stopWords {
+			if let index = list.indexOf(word) {
+				list.removeAtIndex(index)
+			}
 		}
-	}
-
-	mutating func removeObjectsInArray(array: [Element]) {
-		for object in array {
-			self.removeObject(object)
-		}
+		return list
 	}
 }

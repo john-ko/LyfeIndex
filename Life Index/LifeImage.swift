@@ -6,22 +6,15 @@
 //  Copyright © 2016 CS125. All rights reserved.
 //
 
-import Foundation
+import UIKit
+import RealmSwift
 
-class LifeImage: RLMObject {
+class LifeImage: Object {
 	
-	dynamic var imageId: String
+	dynamic var imageId: String = ""
 	dynamic var largeImage: UIImage? = nil
 	dynamic var thumbnail: UIImage? = nil
 	
 	var imageTags: [String] = []
 	
-	init (imageUrl: String) {
-		self.imageId = imageUrl
-		super.init()
-	}
-	
-	override static func primaryKey() -> String? {
-		return "imageId"
-	}
 }
