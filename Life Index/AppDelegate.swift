@@ -9,6 +9,8 @@
 import UIKit
 import KrumbsSDK
 
+let themeColor = UIColor(red: 0.01, green: 0.41, blue: 0.22, alpha: 1.0)
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 	var window: UIWindow?
@@ -42,6 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		let rootView: GalleryViewController = GalleryViewController()
 		self.window?.rootViewController = rootView
 		self.window?.makeKeyAndVisible()
+		self.window?.tintColor = themeColor
 		
 		return true
 	}

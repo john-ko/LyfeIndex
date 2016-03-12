@@ -8,11 +8,14 @@
 
 import UIKit
 import KrumbsSDK
+import MBProgressHUD
+import RealmSwift
 
 class GalleryViewController: UICollectionViewController, KCaptureViewControllerDelegate {
 	
 	private let reuseIdentifier = "ImageCell"
 	private let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
+	var hud: MBProgressHUD = MBProgressHUD()
 	
 	private var searches = [SearchResults]()
 	
@@ -22,14 +25,12 @@ class GalleryViewController: UICollectionViewController, KCaptureViewControllerD
 	
 	let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
 	
-	@IBOutlet weak var imageView: UIImageView!
-	
-	@IBAction func capturePhoto(sender: AnyObject) {
+	/*@IBAction func capturePhoto(sender: AnyObject) {
 		let vc = KrumbsSDK.sharedInstance().startKCaptureViewController()
 		vc.delegate = self
 		
 		self.presentViewController(vc, animated: true, completion: nil)
-	}
+	}*/
 	
 	func captureController(captureController: KCaptureViewController!, didFinishPickingMediaWithInfo media: [String : AnyObject]!) {
 	
@@ -47,23 +48,46 @@ class GalleryViewController: UICollectionViewController, KCaptureViewControllerD
 		let completionState = String(media[KCaptureControllerCompletionState]?.intValue)
 		NSLog("Capture Completion State: ", completionState)
 		
-		self.tagAndStoreImage(mediaJsonUrl, image: (media[KCaptureControllerImageUrl] as! UIImage))
+		self.tagAndStoreImage(mediaJsonUrl.absoluteString, image: (media[KCaptureControllerImageUrl] as! UIImage))
 	}
-	
-	private func tagAndStoreImage(mediaJsonUrl: NSURL, image: UIImage) {
-		// show progress hud
-		
-		// Instantiate realm object for persistent local storage
-		//var lifeImage = LifeImage(mediaJsonUrl, image)
 
-		// Instantiate tagging api for json fetching and parsing
-		let taggingApi = TaggingAPI()
+	private var imageId: String = ""
+	private func tagAndStoreImage(mediaJsonUrl: String, image: UIImage) {
+		// show progress hud
+		hud.showAnimated(true)
+		self.imageId = mediaJsonUrl
 		
+		// Store life image in database
+		let lifeImage = LifeImage()
+		lifeImage.largeImage = image
+		lifeImage.imageId = mediaJsonUrl
+		
+		let realm = try! Realm()
+		try! realm.write {
+			realm.add(lifeImage)
+		}
+
 		// request mediaJson object
 		dispatch_async(dispatch_get_main_queue()) {
-			
+			// Instantiate tagging api for json fetching and parsing
+			let taggingAPI = TaggingAPI()
+			taggingAPI.postImage(image, callback: self.storeTags)
 			// remove progress hud
-			//hud.hide(true)
+			self.hud.hideAnimated(true)
+		}
+	}
+	
+	private func storeTags(tags: [String]) -> Void {
+		var tagObjs: [InvertedIndex] = []
+		for i in 0..<tags.count {
+			let tagObject = InvertedIndex()
+			tagObject.tagId = tags[i]
+			tagObject.imageIds.append(self.imageId)
+			tagObjs.append(tagObject)
+		}
+		let realm = try! Realm()
+		try! realm.write {
+			realm.add(tagObjs)
 		}
 	}
 	
@@ -73,7 +97,13 @@ class GalleryViewController: UICollectionViewController, KCaptureViewControllerD
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
+		let layout = UICollectionViewFlowLayout()
+		layout.itemSize = CGSizeMake(100, 100)
+		let collectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: layout)
+		self.view.addSubview(collectionView)
+		collectionView.delegate   = self
+		collectionView.dataSource = self
+		collectionView.registerClass(GalleryImageCell.self, forCellWithReuseIdentifier: "ImageCell")
 		// Do any additional setup after loading the view.
 	}
 	
