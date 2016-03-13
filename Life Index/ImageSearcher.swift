@@ -10,7 +10,7 @@ import UIKit
 import RealmSwift
 
 struct SearchResults {
-	let searchQuery : String
+	var searchQuery : String
 	var searchResults : [UIImage] = []
 }
 
@@ -23,25 +23,28 @@ class ImageSearcher {
 		print("Query: \(searchQuery) normalized to: \(searchTags)")
 
 		var searchResults: SearchResults = SearchResults(searchQuery: searchQuery, searchResults: [])
+		searchResults.searchQuery = searchQuery
 		var indexObjects: [InvertedIndex] = []
 		var lifeImages: [LifeImage] = []
 
 		let realm = try! Realm()
 
 		for i in 0..<searchTags.count {
-			let indexObject = realm.objectForPrimaryKey(InvertedIndex.self, key: searchTags[i])
-			indexObjects.append(indexObject!)
+			if let indexObject = realm.objectForPrimaryKey(InvertedIndex.self, key: searchTags[i]) {
+				indexObjects.append(indexObject)
+			}
 		}
 		
 		for i in 0..<indexObjects.count {
 			for j in 0...indexObjects[i].imageIds.count {
-				let lifeImage = realm.objectForPrimaryKey(LifeImage.self, key: indexObjects[i].imageIds[j])
-				lifeImages.append(lifeImage!)
+				if let lifeImage = realm.objectForPrimaryKey(LifeImage.self, key: indexObjects[i].imageIds[j]) {
+					lifeImages.append(lifeImage)
+				}
 			}
 		}
 		
 		for i in 0..<lifeImages.count {
-			searchResults.searchResults.append(lifeImages[i].largeImage!)
+			searchResults.searchResults.append(UIImage(data: lifeImages[i].largeImage!)!)
 		}
 
 		return searchResults
@@ -49,7 +52,6 @@ class ImageSearcher {
 
 	// returns a list of space delimited tokens
 	private func tokenizeQuery(searchQuery: String) -> [String] {
-
 		return searchQuery.lowercaseString.characters.split{$0 == " "}.map(String.init)
 	}
 

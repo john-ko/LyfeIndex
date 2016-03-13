@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7A3397BF1C829B260010D3FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3397BE1C829B260010D3FF /* AppDelegate.swift */; };
-		7A3397C41C829B260010D3FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A3397C21C829B260010D3FF /* Main.storyboard */; };
 		7A3397D41C829B260010D3FF /* Life_IndexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3397D31C829B260010D3FF /* Life_IndexTests.swift */; };
 		7A3397DF1C829B260010D3FF /* Life_IndexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3397DE1C829B260010D3FF /* Life_IndexUITests.swift */; };
 		7A3397EE1C829B820010D3FF /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3397EC1C829B820010D3FF /* GalleryViewController.swift */; };
@@ -18,7 +17,6 @@
 		7A374FA61C87DCF200C1D798 /* TaggingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A374FA51C87DCF200C1D798 /* TaggingAPI.swift */; };
 		7A374FA81C87E15300C1D798 /* GalleryImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A374FA71C87E15300C1D798 /* GalleryImageCell.swift */; };
 		7A374FAA1C87E1AE00C1D798 /* ImageSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A374FA91C87E1AE00C1D798 /* ImageSearcher.swift */; };
-		7A3EC2FD1C88A9AA0086D188 /* LifeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3EC2FC1C88A9AA0086D188 /* LifeImage.swift */; };
 		7AAF72981C8F7E5000308906 /* InvertedIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAF72971C8F7E5000308906 /* InvertedIndex.swift */; };
 		7AEA46B11C9385FF00D492DD /* MBProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7AEA46AF1C9385A000D492DD /* MBProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7AF3B8151C911C99004CCCED /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF3B8131C911C99004CCCED /* Realm.framework */; };
@@ -80,7 +78,6 @@
 /* Begin PBXFileReference section */
 		7A3397BB1C829B260010D3FF /* Life Index.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Life Index.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A3397BE1C829B260010D3FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7A3397C31C829B260010D3FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7A3397CA1C829B260010D3FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A3397CF1C829B260010D3FF /* Life IndexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Life IndexTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A3397D31C829B260010D3FF /* Life_IndexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Life_IndexTests.swift; sourceTree = "<group>"; };
@@ -95,7 +92,6 @@
 		7A374FA51C87DCF200C1D798 /* TaggingAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaggingAPI.swift; sourceTree = "<group>"; };
 		7A374FA71C87E15300C1D798 /* GalleryImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryImageCell.swift; sourceTree = "<group>"; };
 		7A374FA91C87E1AE00C1D798 /* ImageSearcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSearcher.swift; sourceTree = "<group>"; };
-		7A3EC2FC1C88A9AA0086D188 /* LifeImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeImage.swift; sourceTree = "<group>"; };
 		7A46B6001C913F4D00CD6E33 /* Life Index-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Life Index-Bridging-Header.h"; sourceTree = "<group>"; };
 		7AAF72971C8F7E5000308906 /* InvertedIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvertedIndex.swift; sourceTree = "<group>"; };
 		7AEA46A71C93859F00D492DD /* MBProgressHUD.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MBProgressHUD.xcodeproj; path = "../../../../../Downloads/MBProgressHUD-master/MBProgressHUD.xcodeproj"; sourceTree = "<group>"; };
@@ -164,10 +160,8 @@
 				7A374FA71C87E15300C1D798 /* GalleryImageCell.swift */,
 				7A374FA91C87E1AE00C1D798 /* ImageSearcher.swift */,
 				7A3397EC1C829B820010D3FF /* GalleryViewController.swift */,
-				7A3EC2FC1C88A9AA0086D188 /* LifeImage.swift */,
 				7AAF72971C8F7E5000308906 /* InvertedIndex.swift */,
 				7A46B6001C913F4D00CD6E33 /* Life Index-Bridging-Header.h */,
-				7A3397C21C829B260010D3FF /* Main.storyboard */,
 				7A3397F11C82A2DD0010D3FF /* Images.xcassets */,
 				7A3397F21C82A2DD0010D3FF /* IntentResourcesExample.bundle */,
 				7A3397F31C82A2DD0010D3FF /* IntentResourcesExample.xcassets */,
@@ -335,7 +329,6 @@
 				7A3397F41C82A2DD0010D3FF /* Images.xcassets in Resources */,
 				7A3397F51C82A2DD0010D3FF /* IntentResourcesExample.bundle in Resources */,
 				7A3397F61C82A2DD0010D3FF /* IntentResourcesExample.xcassets in Resources */,
-				7A3397C41C829B260010D3FF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,7 +354,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A374FA81C87E15300C1D798 /* GalleryImageCell.swift in Sources */,
-				7A3EC2FD1C88A9AA0086D188 /* LifeImage.swift in Sources */,
 				7A3397BF1C829B260010D3FF /* AppDelegate.swift in Sources */,
 				7AAF72981C8F7E5000308906 /* InvertedIndex.swift in Sources */,
 				7A374FA61C87DCF200C1D798 /* TaggingAPI.swift in Sources */,
@@ -400,17 +392,6 @@
 			targetProxy = 7A3397DB1C829B260010D3FF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		7A3397C21C829B260010D3FF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7A3397C31C829B260010D3FF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		7A3397E11C829B260010D3FF /* Debug */ = {

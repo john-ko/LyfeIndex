@@ -11,8 +11,9 @@ import KrumbsSDK
 import MBProgressHUD
 import RealmSwift
 
-class GalleryViewController: UICollectionViewController, KCaptureViewControllerDelegate {
+class GalleryViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UITextFieldDelegate, KCaptureViewControllerDelegate, UINavigationBarDelegate {
 	
+	var collectionView: UICollectionView!
 	private let reuseIdentifier = "ImageCell"
 	private let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
 	var hud: MBProgressHUD = MBProgressHUD()
@@ -25,12 +26,12 @@ class GalleryViewController: UICollectionViewController, KCaptureViewControllerD
 	
 	let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
 	
-	/*@IBAction func capturePhoto(sender: AnyObject) {
+	func capturePhoto(sender: AnyObject) {
 		let vc = KrumbsSDK.sharedInstance().startKCaptureViewController()
 		vc.delegate = self
 		
 		self.presentViewController(vc, animated: true, completion: nil)
-	}*/
+	}
 	
 	func captureController(captureController: KCaptureViewController!, didFinishPickingMediaWithInfo media: [String : AnyObject]!) {
 	
@@ -48,18 +49,20 @@ class GalleryViewController: UICollectionViewController, KCaptureViewControllerD
 		let completionState = String(media[KCaptureControllerCompletionState]?.intValue)
 		NSLog("Capture Completion State: ", completionState)
 		
-		self.tagAndStoreImage(mediaJsonUrl.absoluteString, image: (media[KCaptureControllerImageUrl] as! UIImage))
+		dispatch_async(dispatch_get_main_queue()) {
+			self.tagAndStoreImage(mediaJsonUrl.absoluteString, image: (media[KCaptureControllerImageUrl] as! UIImage))
+		}
 	}
 
 	private var imageId: String = ""
 	private func tagAndStoreImage(mediaJsonUrl: String, image: UIImage) {
 		// show progress hud
-		hud.showAnimated(true)
+	//	hud.showAnimated(true)
 		self.imageId = mediaJsonUrl
 		
 		// Store life image in database
 		let lifeImage = LifeImage()
-		lifeImage.largeImage = image
+		lifeImage.largeImage = UIImagePNGRepresentation(image)
 		lifeImage.imageId = mediaJsonUrl
 		
 		let realm = try! Realm()
@@ -67,22 +70,21 @@ class GalleryViewController: UICollectionViewController, KCaptureViewControllerD
 			realm.add(lifeImage)
 		}
 
-		// request mediaJson object
-		dispatch_async(dispatch_get_main_queue()) {
-			// Instantiate tagging api for json fetching and parsing
-			let taggingAPI = TaggingAPI()
-			taggingAPI.postImage(image, callback: self.storeTags)
-			// remove progress hud
-			self.hud.hideAnimated(true)
-		}
+		// Instantiate tagging api for json fetching and parsing
+		let taggingAPI = TaggingAPI()
+		taggingAPI.postImage(image, callback: self.storeTags)
+		// remove progress hud
+		//	self.hud.hideAnimated(true)
 	}
 	
 	private func storeTags(tags: [String]) -> Void {
 		var tagObjs: [InvertedIndex] = []
 		for i in 0..<tags.count {
 			let tagObject = InvertedIndex()
+			let strObj = Strings()
+			strObj.name = self.imageId
 			tagObject.tagId = tags[i]
-			tagObject.imageIds.append(self.imageId)
+			tagObject.imageIds.append(strObj)
 			tagObjs.append(tagObject)
 		}
 		let realm = try! Realm()
@@ -95,61 +97,33 @@ class GalleryViewController: UICollectionViewController, KCaptureViewControllerD
 		NSLog("User Canceled Capture!")
 	}
 	
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		let layout = UICollectionViewFlowLayout()
-		layout.itemSize = CGSizeMake(100, 100)
-		let collectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: layout)
-		self.view.addSubview(collectionView)
-		collectionView.delegate   = self
-		collectionView.dataSource = self
-		collectionView.registerClass(GalleryImageCell.self, forCellWithReuseIdentifier: "ImageCell")
-		// Do any additional setup after loading the view.
-	}
-	
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
-	}
-
-	/*
-	// MARK: - Navigation
-	
-	// In a storyboard-based application, you will often want to do a little preparation before navigation
-	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-	// Get the new view controller using segue.destinationViewController.
-	// Pass the selected object to the new view controller.
-	}
-	*/
-	
-}
-
-extension GalleryViewController {
-	
-	override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+	func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
 		return searches.count
+		//return 1
 	}
 	
-	override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+	func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		return searches[section].searchResults.count
+		//return 10
 	}
 	
-	override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+	func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
 		
-		let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! GalleryImageCell
+		let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! GalleryImageCell
 		
 		let photo = photoForIndexPath(indexPath)
 		cell.backgroundColor = UIColor.blackColor()
 		
 		cell.imageView.image = photo
 		
+//		cell.imageView.image = UIImage(named: "star")
 		return cell
+		
 	}
-}
-
-extension GalleryViewController: UITextFieldDelegate {
+	
 	func textFieldShouldReturn(textField: UITextField) -> Bool {
 		
+		print("IN HERE")
 		let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
 		textField.addSubview(activityIndicator)
 		activityIndicator.frame = textField.bounds
@@ -167,22 +141,12 @@ extension GalleryViewController: UITextFieldDelegate {
 		textField.resignFirstResponder()
 		return true
 	}
-}
-
-extension GalleryViewController: UICollectionViewDelegateFlowLayout {
 	
 	func collectionView(collectionView: UICollectionView,
 		layout collectionViewLayout: UICollectionViewLayout,
 		sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
 			
-		/*	let flickrPhoto =  photoForIndexPath(indexPath)
-			//2
-			if var size = flickrPhoto.thumbnail?.size {
-				size.width += 10
-				size.height += 10
-				return size
-			} */
-			return CGSize(width: 100, height: 100)
+		return CGSize(width: 100, height: 100)
 	}
 	
 	func collectionView(collectionView: UICollectionView,
@@ -190,4 +154,66 @@ extension GalleryViewController: UICollectionViewDelegateFlowLayout {
 		insetForSectionAtIndex section: Int) -> UIEdgeInsets {
 			return sectionInsets
 	}
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+		// Create the collection view
+		let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+		layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
+		layout.itemSize = CGSize(width: 90, height: 120)
+		
+		collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
+		collectionView.dataSource = self
+		collectionView.delegate = self
+		collectionView.registerClass(GalleryImageCell.self, forCellWithReuseIdentifier: "Cell")
+		collectionView.backgroundColor = UIColor.whiteColor()
+		self.view.addSubview(collectionView)
+		
+		// Create the navigation bar
+		let navigationBar = UINavigationBar(frame: CGRectMake(0, 0, self.view.frame.size.width, 64)) // Offset by 20 pixels vertically to take the status bar into account
+		
+		navigationBar.backgroundColor = UIColor.whiteColor()
+		navigationBar.delegate = self
+		
+		// Create a navigation item with a title
+		let navigationItem = UINavigationItem()
+		
+		// Create search bar
+		let textField = UITextField(frame: CGRectMake(0, 0, navigationBar.frame.size.width, 21.0))
+		textField.placeholder = "Search"
+		textField.returnKeyType = UIReturnKeyType.Search
+		textField.delegate = self
+		navigationItem.titleView = textField
+		
+		// Create left and right button for navigation item
+		//let leftButton =  UIBarButtonItem(title: "Save", style:   UIBarButtonItemStyle.Plain, target: self, action: "btn_clicked:")
+		let rightButton = UIBarButtonItem(title: "Capture", style: UIBarButtonItemStyle.Plain, target: self, action: "capturePhoto:")
+		
+		// Create two buttons for the navigation item
+		//navigationItem.leftBarButtonItem = leftButton
+		navigationItem.rightBarButtonItem = rightButton
+		
+		// Assign the navigation item to the navigation bar
+		navigationBar.items = [navigationItem]
+		
+		// Make the navigation bar a subview of the current view controller
+		self.view.addSubview(navigationBar)
+	}
+	
+	override func didReceiveMemoryWarning() {
+		super.didReceiveMemoryWarning()
+		// Dispose of any resources that can be recreated.
+	}
+
+	/*
+	// MARK: - Navigation
+	
+	// In a storyboard-based application, you will often want to do a little preparation before navigation
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+	// Get the new view controller using segue.destinationViewController.
+	// Pass the selected object to the new view controller.
+	}
+	*/
+	
 }

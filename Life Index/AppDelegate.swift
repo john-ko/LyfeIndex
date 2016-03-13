@@ -43,8 +43,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		self.window = UIWindow.init(frame: UIScreen.mainScreen().bounds)
 		let rootView: GalleryViewController = GalleryViewController()
 		self.window?.rootViewController = rootView
-		self.window?.makeKeyAndVisible()
+		self.window?.backgroundColor = UIColor.whiteColor()
 		self.window?.tintColor = themeColor
+		self.window?.makeKeyAndVisible()
 		
 		return true
 	}

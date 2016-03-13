@@ -9,10 +9,27 @@
 import UIKit
 import RealmSwift
 
+class Strings: Object {
+	dynamic var name = ""
+}
+
+class LifeImage: Object {
+	
+	dynamic var imageId = ""
+	dynamic var largeImage: NSData? = nil
+	//dynamic var thumbnail: UIImage? = nil
+	
+	var imageTags = List<Strings>()
+	
+	override static func primaryKey() -> String? {
+		return "imageId"
+	}
+}
+
 class InvertedIndex: Object {
 	
-	dynamic var tagId: String = ""
-	var imageIds: [String] = []
+	dynamic var tagId = ""
+	let imageIds = List<Strings>()
 	
 	override static func primaryKey() -> String? {
 		return "tagId"
