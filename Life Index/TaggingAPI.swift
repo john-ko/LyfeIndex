@@ -65,7 +65,7 @@ class TaggingAPI {
 		
 		// Run the request on a background thread
 		dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
-			self.runRequestOnBackgroundThread(request)
+			self.runRequestOnBackgroundThread(request, callback:callback)
 		});
 		
 	}
@@ -109,14 +109,14 @@ class TaggingAPI {
 		return results
 	}
 	
-	func runRequestOnBackgroundThread(request: NSMutableURLRequest) {
+	func runRequestOnBackgroundThread(request: NSMutableURLRequest, callback: ([String]) -> Void) {
 		
 		let session = NSURLSession.sharedSession()
 		
 		// run the request
 		let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
 			print(NSString(data: data!, encoding: NSUTF8StringEncoding)!)
-			self.parseJson(NSString(data: data!, encoding: NSUTF8StringEncoding)!)
+			callback(self.parseJson(NSString(data: data!, encoding: NSUTF8StringEncoding)!))
 			
 		})
 		task.resume()
