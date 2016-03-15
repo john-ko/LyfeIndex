@@ -8,7 +8,6 @@
 
 import UIKit
 import KrumbsSDK
-import MBProgressHUD
 import RealmSwift
 
 class GalleryViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, UITextFieldDelegate, KCaptureViewControllerDelegate, UINavigationBarDelegate {
@@ -16,7 +15,6 @@ class GalleryViewController: UIViewController, UICollectionViewDelegateFlowLayou
 	var collectionView: UICollectionView!
 	private let reuseIdentifier = "ImageCell"
 	private let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
-	var hud: MBProgressHUD = MBProgressHUD()
 	
 	private var searches = [SearchResults]()
 	
@@ -76,7 +74,6 @@ class GalleryViewController: UIViewController, UICollectionViewDelegateFlowLayou
 	}
 	
 	func storeTags(tags: [String]) -> Void {
-		print("TAGS ARE BEING STORED")
 		var tagObjs: [InvertedIndex] = []
 		for i in 0..<tags.count {
 			let tagObject = InvertedIndex()

@@ -18,7 +18,6 @@
 		7A374FA81C87E15300C1D798 /* GalleryImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A374FA71C87E15300C1D798 /* GalleryImageCell.swift */; };
 		7A374FAA1C87E1AE00C1D798 /* ImageSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A374FA91C87E1AE00C1D798 /* ImageSearcher.swift */; };
 		7AAF72981C8F7E5000308906 /* InvertedIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAF72971C8F7E5000308906 /* InvertedIndex.swift */; };
-		7AEA46B11C9385FF00D492DD /* MBProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7AEA46AF1C9385A000D492DD /* MBProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7AF3B8151C911C99004CCCED /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF3B8131C911C99004CCCED /* Realm.framework */; };
 		7AF3B8161C911C99004CCCED /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF3B8131C911C99004CCCED /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7AF3B8171C911C99004CCCED /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF3B8141C911C99004CCCED /* RealmSwift.framework */; };
@@ -42,20 +41,6 @@
 			remoteGlobalIDString = 7A3397BA1C829B260010D3FF;
 			remoteInfo = "Life Index";
 		};
-		7AEA46AC1C9385A000D492DD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7AEA46A71C93859F00D492DD /* MBProgressHUD.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D286A7491518C70F00E13FB8;
-			remoteInfo = "MBProgressHUD Static Library";
-		};
-		7AEA46AE1C9385A000D492DD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7AEA46A71C93859F00D492DD /* MBProgressHUD.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1D104D7A1ACA36CC00973364;
-			remoteInfo = "MBProgressHUD Framework";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -65,7 +50,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				7AEA46B11C9385FF00D492DD /* MBProgressHUD.framework in Embed Frameworks */,
 				7AF3B8181C911C99004CCCED /* RealmSwift.framework in Embed Frameworks */,
 				7AF3B8161C911C99004CCCED /* Realm.framework in Embed Frameworks */,
 				7AF3B81B1C911CBE004CCCED /* KrumbsSDK.framework in Embed Frameworks */,
@@ -94,7 +78,6 @@
 		7A374FA91C87E1AE00C1D798 /* ImageSearcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSearcher.swift; sourceTree = "<group>"; };
 		7A46B6001C913F4D00CD6E33 /* Life Index-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Life Index-Bridging-Header.h"; sourceTree = "<group>"; };
 		7AAF72971C8F7E5000308906 /* InvertedIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvertedIndex.swift; sourceTree = "<group>"; };
-		7AEA46A71C93859F00D492DD /* MBProgressHUD.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MBProgressHUD.xcodeproj; path = "../../../../../Downloads/MBProgressHUD-master/MBProgressHUD.xcodeproj"; sourceTree = "<group>"; };
 		7AF3B8131C911C99004CCCED /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		7AF3B8141C911C99004CCCED /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		7AF3B8191C911CBE004CCCED /* KrumbsSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KrumbsSDK.framework; sourceTree = "<group>"; };
@@ -131,7 +114,6 @@
 		7A3397B21C829B260010D3FF = {
 			isa = PBXGroup;
 			children = (
-				7AEA46A71C93859F00D492DD /* MBProgressHUD.xcodeproj */,
 				7AF3B8191C911CBE004CCCED /* KrumbsSDK.framework */,
 				7AF3B8131C911C99004CCCED /* Realm.framework */,
 				7AF3B8141C911C99004CCCED /* RealmSwift.framework */,
@@ -186,15 +168,6 @@
 				7A3397E01C829B260010D3FF /* Info.plist */,
 			);
 			path = "Life IndexUITests";
-			sourceTree = "<group>";
-		};
-		7AEA46A81C93859F00D492DD /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				7AEA46AD1C9385A000D492DD /* libMBProgressHUD.a */,
-				7AEA46AF1C9385A000D492DD /* MBProgressHUD.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,12 +262,6 @@
 			mainGroup = 7A3397B21C829B260010D3FF;
 			productRefGroup = 7A3397BC1C829B260010D3FF /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 7AEA46A81C93859F00D492DD /* Products */;
-					ProjectRef = 7AEA46A71C93859F00D492DD /* MBProgressHUD.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				7A3397BA1C829B260010D3FF /* Life Index */,
@@ -303,23 +270,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		7AEA46AD1C9385A000D492DD /* libMBProgressHUD.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libMBProgressHUD.a;
-			remoteRef = 7AEA46AC1C9385A000D492DD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		7AEA46AF1C9385A000D492DD /* MBProgressHUD.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = MBProgressHUD.framework;
-			remoteRef = 7AEA46AE1C9385A000D492DD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		7A3397B91C829B260010D3FF /* Resources */ = {
