@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "5830853C90DFEE6F17434916510C74C752E29799",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "F356CF6DA76DF468C47D42278CE84C5F3B63DB5E" : 0,
+    "5830853C90DFEE6F17434916510C74C752E29799" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A26BB7E0-0439-4993-B377-721B5ADA6486",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "F356CF6DA76DF468C47D42278CE84C5F3B63DB5E" : "krumbs-sdk-samples\/",
+    "5830853C90DFEE6F17434916510C74C752E29799" : "Life-Index\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Life Index",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Life Index.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ronnyvega\/Life-Index.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5830853C90DFEE6F17434916510C74C752E29799"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/ronny_vega\/krumbs-sdk-samples.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F356CF6DA76DF468C47D42278CE84C5F3B63DB5E"
+    }
+  ]
+}

@@ -1,1 +1,0 @@
-../../../../KrumbsSDK/KrumbsSDK.framework/Headers/KIntentPanelConfiguration.h
