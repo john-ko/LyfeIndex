@@ -6,17 +6,65 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Life Index/GalleryViewController.swift"
-            timestampString = "479520738.177191"
+            timestampString = "479762996.282494"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "storeTags(_:)"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Life Index/GalleryViewController.swift"
+            timestampString = "479762996.282494"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "storeTags(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Life_Index.GalleryViewController.storeTags (Life_Index.GalleryViewController)(Swift.Array&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "Life Index"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Atomisk/Dropbox/Winter%202016/CS%20125/Project/Life-Index/Life%20Index/GalleryViewController.swift"
+                  timestampString = "479762922.666174"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "816">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Life_Index.GalleryViewController.(storeTags (Life_Index.GalleryViewController) -&gt; (Swift.Array&lt;Swift.String&gt;) -&gt; ()).(closure #1)"
+                  moduleName = "Life Index"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Atomisk/Dropbox/Winter%202016/CS%20125/Project/Life-Index/Life%20Index/GalleryViewController.swift"
+                  timestampString = "479762922.666526"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
