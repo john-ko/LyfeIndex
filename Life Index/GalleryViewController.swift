@@ -49,15 +49,12 @@ class GalleryViewController: UIViewController, UICollectionViewDelegateFlowLayou
 		let completionState = String(media[KCaptureControllerCompletionState]?.intValue)
 		NSLog("Capture Completion State: ", completionState)
 		
-		dispatch_async(dispatch_get_main_queue()) {
-			self.tagAndStoreImage(mediaJsonUrl.absoluteString, image: (media[KCaptureControllerImageUrl] as! UIImage))
-		}
+		self.tagAndStoreImage(mediaJsonUrl.absoluteString, image: (media[KCaptureControllerImageUrl] as! UIImage))
 	}
 
 	private var imageId: String = ""
 	private func tagAndStoreImage(mediaJsonUrl: String, image: UIImage) {
 		// show progress hud
-	//	hud.showAnimated(true)
 		self.imageId = mediaJsonUrl
 		
 		// Store life image in database
@@ -71,13 +68,15 @@ class GalleryViewController: UIViewController, UICollectionViewDelegateFlowLayou
 		}
 
 		// Instantiate tagging api for json fetching and parsing
+		//dispatch_async(dispatch_get_main_queue()) {
 		let taggingAPI = TaggingAPI()
 		taggingAPI.postImage(image, callback: self.storeTags)
+		//}
 		// remove progress hud
-		//	self.hud.hideAnimated(true)
 	}
 	
-	private func storeTags(tags: [String]) -> Void {
+	func storeTags(tags: [String]) -> Void {
+		print("TAGS ARE BEING STORED")
 		var tagObjs: [InvertedIndex] = []
 		for i in 0..<tags.count {
 			let tagObject = InvertedIndex()
@@ -123,7 +122,6 @@ class GalleryViewController: UIViewController, UICollectionViewDelegateFlowLayou
 	
 	func textFieldShouldReturn(textField: UITextField) -> Bool {
 		
-		print("IN HERE")
 		let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
 		textField.addSubview(activityIndicator)
 		activityIndicator.frame = textField.bounds
